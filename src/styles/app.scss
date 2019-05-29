@@ -1,0 +1,80 @@
+@import './vars';
+@import './reset';
+@import './fonts';
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  height: 100%; 
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: $color-bg;
+  color: $color-body;
+  font-family: qanelas, helvetica, "helvetica neue", arial, sans-serif;
+  font-size: $font-body;
+  font-weight: 500;
+  line-height: 1.4;
+  overflow-x: hidden;
+}
+
+.content {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 60px 0 0;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h2 {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+
+  &--cta {
+    background-color: $orange-100;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &--record {
+    background-color: white;
+    color: $grey-cool-20;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid $color-border-light;
+  }
+}
+
+.dropdown {
+  padding: 5px 20px;
+  display: inline-block;
+  border: 1px solid $color-border;
+  border-radius: 2px;
+  // text-transform: uppercase;
+}

@@ -1,0 +1,71 @@
+// ------------------------------------
+// Colors
+// ------------------------------------
+$color-temp: rgba(white, .15);
+
+$grey-cool-0: #0B0C0C;
+$grey-cool-20: #151718;
+$grey-cool-40: #2B2E30;
+$grey-cool-60: #404648;
+$grey-cool-80: #565D60;
+$grey-cool-140: #A6ACAE;
+$grey-cool-160: #C4C7C9;
+$grey-cool-180: #E1E3E4;
+
+$orange-100: #FA4616;
+
+$color-bg: $grey-cool-0;
+$color-body: $grey-cool-180;
+$color-header: $grey-cool-0;
+$color-footer: $grey-cool-20;
+$color-border: $grey-cool-80;
+$color-border-light: $grey-cool-160;
+
+// ------------------------------------
+// Typography
+// ------------------------------------
+$font-nav: 14px; // site nav links
+$font-subnav: 14px; // subnav links
+$font-body: 16px; // default body
+$font-field-placeholder: 14px; // site nav search
+$font-account-link: 14px; // account dropdown
+$font-more-link: 14px; // more link
+$font-section-title: 18px; // section header
+$font-page-title: 28px; // section header
+$font-league-label: 18px; // league carousel item
+
+$font-meta-airing: 12px; // renderer airtime and date
+$font-meta-title: 16px; // renderer program title
+$font-meta-subhead: 12px; // renderer program title
+
+$font-banner-headline: 28px; // banner unit headline
+
+$font-footer-section: 16px; // footer link section header
+$font-footer-link: 14px; // footer section links
+$font-footer-section: 16px; // footer link section header
+$font-footer-signoff: 14px; // footer legal links
+$font-footer-description: 14px; // footer legal links
+
+$font-hero-headline: 50px; // hero headline
+$font-hero-subhead: 28px; // hero subhead
+$font-hero-cta: 14px; // hero subhead
+$font-hero-card-headline: 18px; // hero headline
+$font-hero-card-subhead: 14px; // hero headline
+$font-table-head: 16px; // match table header
+
+$font-match-airdate:  14px; // match list item airdate
+$font-match-league:  14px; // match list item league
+$font-match-vs:  14px; // match list item vs
+$font-match-team:  14px; // match list item team
+$font-match-cta:  14px; // match list item cta
+
+$font-filters: 16px; // filter menu
+
+$font-dvr-space-header: 14px;
+$font-dvr-space-recorded: 22px;
+$font-dvr-space-percent: 13px;
+$font-dvr-title: 18px;
+$font-dvr-status: 11px;
+$font-dvr-subhead: 13px;
+$font-dvr-meta-detail: 13px;
+$font-dvr-meta-actions: 13px;
