@@ -44,6 +44,9 @@ export default {
     Carousel,
     CarouselFeatured,
     Grid
+  },
+  mounted () {
+    // alert(this.$store.state.bodyMD)
   }
 }
 </script>

@@ -41,6 +41,9 @@ export default {
     Hero,
     CarouselMovie,
     Grid
+  },
+  mounted () {
+    // alert(this.$store.state.bodyMD)
   }
 }
 </script>

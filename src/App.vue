@@ -257,7 +257,7 @@
         </div>
       </transition>
     </div>
-    <router-view/>
+    <router-view :key="$route.fullPath" />
   </div>
 </template>
 
@@ -267,6 +267,17 @@ export default {
   data: function () {
     return {
       panelOpen: false,
+      HXS: null,
+      HSM: null,
+      HMD: null,
+      HLG: null,
+      HXL: null,
+      HXXL: null,
+      BXS: null,
+      BSM: null,
+      BMD: null,
+      BLG: null,
+      BXL: null,
     }
   },
   methods: {
@@ -275,53 +286,53 @@ export default {
     },
 
     setFonts: function () {
-      let HXS = document.querySelectorAll('.headline-xs');
-      let HSM = document.querySelectorAll('.headline-sm');
-      let HMD = document.querySelectorAll('.headline-md');
-      let HLG = document.querySelectorAll('.headline-lg');
-      let HXL = document.querySelectorAll('.headline-xl');
-      let HXXL = document.querySelectorAll('.headline-xxl');
-
-      for (let i=0; i< HXS.length; i++) {
-        HXS[i].style.fontSize = this.$store.state.headlineXS + 'px';
+      this.HXS = document.querySelectorAll('.headline-xs');
+      this.HSM = document.querySelectorAll('.headline-sm');
+      this.HMD = document.querySelectorAll('.headline-md');
+      this.HLG = document.querySelectorAll('.headline-lg');
+      this.HXL = document.querySelectorAll('.headline-xl');
+      this.HXXL = document.querySelectorAll('.headline-xxl');
+      
+      for (let i=0; i< this.HXS.length; i++) {
+        this.HXS[i].style.fontSize = this.$store.state.headlineXS + 'px';
       }
-      for (let i=0; i< HSM.length; i++) {
-        HSM[i].style.fontSize = this.$store.state.headlineSM + 'px';
+      for (let i=0; i< this.HSM.length; i++) {
+        this.HSM[i].style.fontSize = this.$store.state.headlineSM + 'px';
       }
-      for (let i=0; i< HMD.length; i++) {
-        HMD[i].style.fontSize = this.$store.state.headlineMD + 'px';
+      for (let i=0; i< this.HMD.length; i++) {
+        this.HMD[i].style.fontSize = this.$store.state.headlineMD + 'px';
       }
-      for (let i=0; i< HLG.length; i++) {
-        HLG[i].style.fontSize = this.$store.state.headlineLG + 'px';
+      for (let i=0; i< this.HLG.length; i++) {
+        this.HLG[i].style.fontSize = this.$store.state.headlineLG + 'px';
       }
-      for (let i=0; i< HXL.length; i++) {
-        HXL[i].style.fontSize = this.$store.state.headlineXL + 'px';
+      for (let i=0; i< this.HXL.length; i++) {
+        this.HXL[i].style.fontSize = this.$store.state.headlineXL + 'px';
       }
-      for (let i=0; i< HXXL.length; i++) {
-        HXXL[i].style.fontSize = this.$store.state.headlineXXL + 'px';
+      for (let i=0; i< this.HXXL.length; i++) {
+        this.HXXL[i].style.fontSize = this.$store.state.headlineXXL + 'px';
       }
       
       
-      let BXS = document.querySelectorAll('.body-xs');
-      let BSM = document.querySelectorAll('.body-sm');
-      let BMD = document.querySelectorAll('.body-md');
-      let BLG = document.querySelectorAll('.body-lg');
-      let BXL = document.querySelectorAll('.body-xl');
+      this.BXS = document.querySelectorAll('.body-xs');
+      this.BSM = document.querySelectorAll('.body-sm');
+      this.BMD = document.querySelectorAll('.body-md');
+      this.BLG = document.querySelectorAll('.body-lg');
+      this.BXL = document.querySelectorAll('.body-xl');
 
-      for (let i=0; i< BXS.length; i++) {
-        BXS[i].style.fontSize = this.$store.state.bodyXS + 'px';
+      for (let i=0; i< this.BXS.length; i++) {
+        this.BXS[i].style.fontSize = this.$store.state.bodyXS + 'px';
       }
-      for (let i=0; i< BSM.length; i++) {
-        BSM[i].style.fontSize = this.$store.state.bodySM + 'px';
+      for (let i=0; i< this.BSM.length; i++) {
+        this.BSM[i].style.fontSize = this.$store.state.bodySM + 'px';
       }
-      for (let i=0; i< BMD.length; i++) {
-        BMD[i].style.fontSize = this.$store.state.bodyMD + 'px';
+      for (let i=0; i< this.BMD.length; i++) {
+        this.BMD[i].style.fontSize = this.$store.state.bodyMD + 'px';
       }
-    for (let i=0; i< BLG.length; i++) {
-      BLG[i].style.fontSize = this.$store.state.bodyLG + 'px';
+      for (let i=0; i< this.BLG.length; i++) {
+        this.BLG[i].style.fontSize = this.$store.state.bodyLG + 'px';
       }
-      for (let i=0; i< BXL.length; i++) {
-        BXL[i].style.fontSize = this.$store.state.bodyXL + 'px';
+      for (let i=0; i< this.BXL.length; i++) {
+        this.BXL[i].style.fontSize = this.$store.state.bodyXL + 'px';
       }
     },
   },
