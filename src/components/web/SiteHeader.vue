@@ -14,7 +14,7 @@
       </nav>
     </div>
     <div class="header__right">
-      <div class="search headline-xs"></div>
+      <div class="search body-sm"></div>
       <div class="account">
         <p class="headline-xs">Hi, David</p>
       </div>

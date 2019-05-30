@@ -3,20 +3,20 @@
     <div class="info">
       <div class="thumbnail"></div>
       <div class="program">
-        <div class="status">Recorded</div>
-        <h2>Program Title</h2>
-        <div class="subhead">
+        <div class="status body-xs">Recorded</div>
+        <h2 class="headline-sm">Program Title</h2>
+        <div class="subhead body-xs">
           S3, EP14 "The Bracket"
         </div>
       </div>
     </div>
 
     <div class="meta">
-      <div class="detail">
+      <div class="detail body-xs">
         Apr 4, 2019 2:00 PM
       </div>
 
-      <div class="actions">
+      <div class="actions body-xs">
         Delete
       </div>
     </div>
@@ -57,7 +57,6 @@ export default {
       top: 0;
       right: 0;
       padding: 20px 20px 0 0;
-      font-size: $font-dvr-meta-detail;
       text-transform: uppercase;
     }
 
@@ -66,7 +65,6 @@ export default {
       bottom: 0;
       right: 0;
       padding: 0 20px 20px 0;
-      font-size: $font-dvr-meta-actions;
       text-transform: uppercase;
       font-weight: 700;
     }
@@ -77,20 +75,14 @@ export default {
     padding: 0 20px;
 
     h2 {
-      font-size: $font-dvr-title;
       font-weight: 700;
       margin-bottom: 5px;
     }
 
     .status {
       margin-bottom: 5px;
-      font-size: $font-dvr-status;
       font-weight: 700;
       text-transform: uppercase;
-    }
-
-    .subhead {
-      font-size: $font-dvr-subhead;
     }
   }
 }

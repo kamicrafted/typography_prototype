@@ -1,272 +1,17 @@
 <template>
   <div id="app">
-    <div class="config" draggable="true">
-      <div @click="togglePanel" class="header">
-        <div class="header__left">
-          Configuration
-        </div>
-        <div class="header__right">
-          <div v-if="!panelOpen" class="marker marker__plus"></div>
-          <div v-if="panelOpen" class="marker marker__minus"></div>
-        </div>
-      </div>
-      <transition name="fadeHeight">
-        <div v-if="panelOpen" class="options">
-          <div class="options__item">
-            <div class="label">
-              Headline SM
-            </div>
-            <select class="select" name="" id="">
-              <option value="">12px</option>
-              <option value="">14px</option>
-              <option value="">16px</option>
-              <option value="">18px</option>
-              <option value="">20px</option>
-              <option value="">24px</option>
-              <option value="">26px</option>
-              <option value="">28px</option>
-              <option value="">30px</option>
-              <option value="">32px</option>
-              <option value="">34px</option>
-              <option value="">36px</option>
-              <option value="">38px</option>
-              <option value="">40px</option>
-              <option value="">42px</option>
-              <option value="">44px</option>
-              <option value="">46px</option>
-              <option value="">48px</option>
-              <option value="">50px</option>
-            </select>
-          </div>
-
-          <div class="options__item">
-            <div class="label">
-              Headline MD
-            </div>
-            <select class="select" name="" id="">
-              <option value="">12px</option>
-              <option value="">14px</option>
-              <option value="">16px</option>
-              <option value="">18px</option>
-              <option value="">20px</option>
-              <option value="">24px</option>
-              <option value="">26px</option>
-              <option value="">28px</option>
-              <option value="">30px</option>
-              <option value="">32px</option>
-              <option value="">34px</option>
-              <option value="">36px</option>
-              <option value="">38px</option>
-              <option value="">40px</option>
-              <option value="">42px</option>
-              <option value="">44px</option>
-              <option value="">46px</option>
-              <option value="">48px</option>
-              <option value="">50px</option>
-            </select>
-          </div>
-
-          <div class="options__item">
-            <div class="label">
-              Headline LG
-            </div>
-            <select class="select" name="" id="">
-              <option value="">12px</option>
-              <option value="">14px</option>
-              <option value="">16px</option>
-              <option value="">18px</option>
-              <option value="">20px</option>
-              <option value="">24px</option>
-              <option value="">26px</option>
-              <option value="">28px</option>
-              <option value="">30px</option>
-              <option value="">32px</option>
-              <option value="">34px</option>
-              <option value="">36px</option>
-              <option value="">38px</option>
-              <option value="">40px</option>
-              <option value="">42px</option>
-              <option value="">44px</option>
-              <option value="">46px</option>
-              <option value="">48px</option>
-              <option value="">50px</option>
-            </select>
-          </div>
-
-          <div class="options__item">
-            <div class="label">
-              Headline XL
-            </div>
-            <select class="select" name="" id="">
-              <option value="">12px</option>
-              <option value="">14px</option>
-              <option value="">16px</option>
-              <option value="">18px</option>
-              <option value="">20px</option>
-              <option value="">24px</option>
-              <option value="">26px</option>
-              <option value="">28px</option>
-              <option value="">30px</option>
-              <option value="">32px</option>
-              <option value="">34px</option>
-              <option value="">36px</option>
-              <option value="">38px</option>
-              <option value="">40px</option>
-              <option value="">42px</option>
-              <option value="">44px</option>
-              <option value="">46px</option>
-              <option value="">48px</option>
-              <option value="">50px</option>
-            </select>
-          </div>
-
-          <div class="options__item">
-            <div class="label">
-              Body XS
-            </div>
-            <select class="select" name="" id="">
-              <option value="">12px</option>
-              <option value="">14px</option>
-              <option value="">16px</option>
-              <option value="">18px</option>
-              <option value="">20px</option>
-              <option value="">24px</option>
-              <option value="">26px</option>
-              <option value="">28px</option>
-              <option value="">30px</option>
-              <option value="">32px</option>
-              <option value="">34px</option>
-              <option value="">36px</option>
-              <option value="">38px</option>
-              <option value="">40px</option>
-              <option value="">42px</option>
-              <option value="">44px</option>
-              <option value="">46px</option>
-              <option value="">48px</option>
-              <option value="">50px</option>
-            </select>
-          </div>
-
-          <div class="options__item">
-            <div class="label">
-              Body SM
-            </div>
-            <select class="select" name="" id="">
-              <option value="">12px</option>
-              <option value="">14px</option>
-              <option value="">16px</option>
-              <option value="">18px</option>
-              <option value="">20px</option>
-              <option value="">24px</option>
-              <option value="">26px</option>
-              <option value="">28px</option>
-              <option value="">30px</option>
-              <option value="">32px</option>
-              <option value="">34px</option>
-              <option value="">36px</option>
-              <option value="">38px</option>
-              <option value="">40px</option>
-              <option value="">42px</option>
-              <option value="">44px</option>
-              <option value="">46px</option>
-              <option value="">48px</option>
-              <option value="">50px</option>
-            </select>
-          </div>
-
-          <div class="options__item">
-            <div class="label">
-              Body MD
-            </div>
-            <select class="select" name="" id="">
-              <option value="">12px</option>
-              <option value="">14px</option>
-              <option value="">16px</option>
-              <option value="">18px</option>
-              <option value="">20px</option>
-              <option value="">24px</option>
-              <option value="">26px</option>
-              <option value="">28px</option>
-              <option value="">30px</option>
-              <option value="">32px</option>
-              <option value="">34px</option>
-              <option value="">36px</option>
-              <option value="">38px</option>
-              <option value="">40px</option>
-              <option value="">42px</option>
-              <option value="">44px</option>
-              <option value="">46px</option>
-              <option value="">48px</option>
-              <option value="">50px</option>
-            </select>
-          </div>
-
-          <div class="options__item">
-            <div class="label">
-              Body LG
-            </div>
-            <select class="select" name="" id="">
-              <option value="">12px</option>
-              <option value="">14px</option>
-              <option value="">16px</option>
-              <option value="">18px</option>
-              <option value="">20px</option>
-              <option value="">24px</option>
-              <option value="">26px</option>
-              <option value="">28px</option>
-              <option value="">30px</option>
-              <option value="">32px</option>
-              <option value="">34px</option>
-              <option value="">36px</option>
-              <option value="">38px</option>
-              <option value="">40px</option>
-              <option value="">42px</option>
-              <option value="">44px</option>
-              <option value="">46px</option>
-              <option value="">48px</option>
-              <option value="">50px</option>
-            </select>
-          </div>
-
-          <div class="options__item">
-            <div class="label">
-              Body XL
-            </div>
-            <select class="select" name="" id="">
-              <option value="">12px</option>
-              <option value="">14px</option>
-              <option value="">16px</option>
-              <option value="">18px</option>
-              <option value="">20px</option>
-              <option value="">24px</option>
-              <option value="">26px</option>
-              <option value="">28px</option>
-              <option value="">30px</option>
-              <option value="">32px</option>
-              <option value="">34px</option>
-              <option value="">36px</option>
-              <option value="">38px</option>
-              <option value="">40px</option>
-              <option value="">42px</option>
-              <option value="">44px</option>
-              <option value="">46px</option>
-              <option value="">48px</option>
-              <option value="">50px</option>
-            </select>
-          </div>
-        </div>
-      </transition>
-    </div>
+    <ConfigPanel />
     <router-view :key="$route.fullPath" />
   </div>
 </template>
 
 <script>
+import ConfigPanel from '@/components/web/ConfigPanel';
+
 export default {
   name: 'app',
   data: function () {
     return {
-      panelOpen: false,
       HXS: null,
       HSM: null,
       HMD: null,
@@ -280,11 +25,10 @@ export default {
       BXL: null,
     }
   },
+  components: {
+    ConfigPanel
+  },
   methods: {
-    togglePanel: function () {
-      this.panelOpen = !this.panelOpen
-    },
-
     setFonts: function () {
       this.HXS = document.querySelectorAll('.headline-xs');
       this.HSM = document.querySelectorAll('.headline-sm');
@@ -354,97 +98,267 @@ export default {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.config {
-  position: fixed;
-  z-index: 1000;
-  bottom: 0;
-  right: 10px;
-  width: 250px;
-  max-height: 350px;
-  box-shadow: 0 14px 30px rgba(black, .5);
-  overflow: auto;
-  opacity: 0;
-  transition: all .15s ease-in-out;
+.headline-xs {
+  position: relative;
 
-  &:hover {
-    opacity: 1;
-  }
-
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
+  &:before {
+    content: "headline-xs";
+    position: absolute;
     background: white;
     color: black;
-    border-radius: 4px 4px 0 0;
-    border-bottom: 1px solid rgba(black, .1);
-    font-weight: bold;
-    font-size: 12px;
+    padding: 5px;
+    font-size: 10px;
+    font-weight: normal;
+    font-family: arial;
+    opacity: 0;
     text-transform: uppercase;
-    cursor: pointer;
+    transition: all 15s eases-in-out;
+    pointer-events: none;
+    top: -15px;
+  }
+  
+  &:hover:before {
+    opacity: 1;
   }
 }
 
-.options {
-  &__item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    background: #f0f0f0;
+.headline-sm {
+  position: relative;
+
+  &:before {
+    content: "headline-sm";
+    position: absolute;
+    background: white;
     color: black;
-
-    &:nth-child(even) {
-      background: #fafafa;
-    }
+    padding: 5px;
+    font-size: 10px;
+    font-weight: normal;
+    font-family: arial;
+    opacity: 0;
+    text-transform: uppercase;
+    transition: all 15s eases-in-out;
+    pointer-events: none;
+    top: -15px;
   }
-
-  .select {
-    width: 30%;
-    font-size: 14px;
-    text-align: right;
-  }
-
-  .label {
-    font-size: 14px;
-  }
-}
-
-.marker {
-  &__minus {
-    width: 10px;
-    height: 2px;
-    background-color: black;
-  }
-
-  &__plus {
-    position: relative;
-    width: 10px;
-    height: 2px;
-    background-color: black;
-
-    &:after {
-      content: '';
-      position: absolute;
-      left: 4px;
-      top: -4px;
-      width: 2px;
-      height: 10px;
-      background-color: black;
-    }
+  
+  &:hover:before {
+    opacity: 1;
   }
 }
 
-.fadeHeight-enter-active,
-.fadeHeight-leave-active {
-  transition: all 0.2s;
-  max-height: 350px;
+.headline-md {
+  position: relative;
+
+  &:before {
+    content: "headline-md";
+    position: absolute;
+    background: white;
+    color: black;
+    padding: 5px;
+    font-size: 10px;
+    font-weight: normal;
+    font-family: arial;
+    opacity: 0;
+    text-transform: uppercase;
+    transition: all 15s eases-in-out;
+    pointer-events: none;
+    top: -15px;
+  }
+  
+  &:hover:before {
+    opacity: 1;
+  }
 }
-.fadeHeight-enter,
-.fadeHeight-leave-to
-{
-  opacity: 0;
-  max-height: 0px;
+
+.headline-lg {
+  position: relative;
+
+  &:before {
+    content: "headline-lg";
+    position: absolute;
+    background: white;
+    color: black;
+    padding: 5px;
+    font-size: 10px;
+    font-weight: normal;
+    font-family: arial;
+    opacity: 0;
+    text-transform: uppercase;
+    transition: all 15s eases-in-out;
+    pointer-events: none;
+    top: -15px;
+  }
+  
+  &:hover:before {
+    opacity: 1;
+  }
+}
+
+.headline-xl {
+  position: relative;
+
+  &:before {
+    content: "headline-xl";
+    position: absolute;
+    background: white;
+    color: black;
+    padding: 5px;
+    font-size: 10px;
+    font-weight: normal;
+    font-family: arial;
+    opacity: 0;
+    text-transform: uppercase;
+    transition: all 15s eases-in-out;
+    pointer-events: none;
+    top: -15px;
+  }
+  
+  &:hover:before {
+    opacity: 1;
+  }
+}
+
+.headline-xxl {
+  position: relative;
+
+  &:before {
+    content: "headline-xxl";
+    position: absolute;
+    background: white;
+    color: black;
+    padding: 5px;
+    font-size: 10px;
+    font-weight: normal;
+    font-family: arial;
+    opacity: 0;
+    text-transform: uppercase;
+    transition: all 15s eases-in-out;
+    pointer-events: none;
+    top: -15px;
+  }
+  
+  &:hover:before {
+    opacity: 1;
+  }
+}
+
+.body-xs {
+  position: relative;
+
+  &:before {
+    content: "body-xs";
+    position: absolute;
+    background: white;
+    color: black;
+    padding: 5px;
+    font-size: 10px;
+    font-weight: normal;
+    font-family: arial;
+    opacity: 0;
+    text-transform: uppercase;
+    transition: all 15s eases-in-out;
+    pointer-events: none;
+    top: -15px;
+  }
+  
+  &:hover:before {
+    opacity: 1;
+  }
+}
+
+.body-sm {
+  position: relative;
+
+  &:before {
+    content: "body-sm";
+    position: absolute;
+    background: white;
+    color: black;
+    padding: 5px;
+    font-size: 10px;
+    font-weight: normal;
+    font-family: arial;
+    opacity: 0;
+    text-transform: uppercase;
+    transition: all 15s eases-in-out;
+    pointer-events: none;
+    top: -15px;
+  }
+  
+  &:hover:before {
+    opacity: 1;
+  }
+}
+
+.body-md {
+  position: relative;
+
+  &:before {
+    content: "body-md";
+    position: absolute;
+    background: white;
+    color: black;
+    padding: 5px;
+    font-size: 10px;
+    font-weight: normal;
+    font-family: arial;
+    opacity: 0;
+    text-transform: uppercase;
+    transition: all 15s eases-in-out;
+    pointer-events: none;
+    top: -15px;
+  }
+  
+  &:hover:before {
+    opacity: 1;
+  }
+}
+
+.body-lg {
+  position: relative;
+
+  &:before {
+    content: "body-lg";
+    position: absolute;
+    background: white;
+    color: black;
+    padding: 5px;
+    font-size: 10px;
+    font-weight: normal;
+    font-family: arial;
+    opacity: 0;
+    text-transform: uppercase;
+    transition: all 15s eases-in-out;
+    pointer-events: none;
+    top: -15px;
+  }
+  
+  &:hover:before {
+    opacity: 1;
+  }
+}
+
+.body-lg {
+  position: relative;
+
+  &:before {
+    content: "body-xl";
+    position: absolute;
+    background: white;
+    color: black;
+    padding: 5px;
+    font-size: 10px;
+    font-weight: normal;
+    font-family: arial;
+    opacity: 0;
+    text-transform: uppercase;
+    transition: all 15s eases-in-out;
+    pointer-events: none;
+    top: -15px;
+  }
+  
+  &:hover:before {
+    opacity: 1;
+  }
 }
 </style>

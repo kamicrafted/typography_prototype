@@ -39,6 +39,9 @@ export default {
     CarouselFeatured,
     CarouselMovie,
     CarouselLeague
+  },
+  mounted () {
+    this.$parent.setFonts()
   }
 }
 </script>

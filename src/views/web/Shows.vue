@@ -46,7 +46,7 @@ export default {
     Grid
   },
   mounted () {
-    // alert(this.$store.state.bodyMD)
+    this.$parent.setFonts()
   }
 }
 </script>

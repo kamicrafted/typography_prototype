@@ -2,8 +2,8 @@
   <div class="home">
     <SiteHeader />
     <div class="page-header">
-      <h1>My Videos</h1>
-      <div class="faq">
+      <h1 class="headline-lg">My Videos</h1>
+      <div class="faq headline-sm">
         My Videos FAQs
       </div>
     </div>
@@ -12,17 +12,17 @@
       <div class="list">
         <div class="utility">
           <div class="filters">
-            <div class="filters__option">All</div>
-            <div class="filters__option">Sports</div>
-            <div class="filters__option">Shows</div>
-            <div class="filters__option">Movies</div>
+            <div class="filters__option headline-xs">All</div>
+            <div class="filters__option headline-xs">Sports</div>
+            <div class="filters__option headline-xs">Shows</div>
+            <div class="filters__option headline-xs">Movies</div>
           </div>
 
-          <div class="search">
+          <div class="search body-sm">
             Find by title, team, league or channel
           </div>
 
-          <div class="dropdown">
+          <div class="dropdown body-sm">
             All Videos
           </div>
         </div>
@@ -34,10 +34,10 @@
 
       <div class="dvr">
         <div class="space">
-          <h3>Cloud DVR Space</h3>
+          <h3 class="headline-xs">Cloud DVR Space</h3>
           <div class="recorded">
-            <h4>15.4 of 500</h4>
-            <p>Hours recorded (3%)</p>
+            <h4 class="headline-lg">15.4 of 500</h4>
+            <p class="body-sm">Hours recorded (3%)</p>
 
             <div class="meter">
             </div>
@@ -61,6 +61,9 @@ export default {
     SiteHeader,
     SiteFooter,
     DVRItem
+  },
+  mounted () {
+    this.$parent.setFonts()
   }
 }
 </script>
@@ -81,7 +84,6 @@ export default {
   background-color: $grey-cool-40;
 
   h1 {
-    font-size: $font-page-title;
     font-weight: 700;
   }
 
@@ -121,12 +123,10 @@ export default {
     border-radius: 0 0 6px 6px;
 
     h4 {
-      font-size: $font-dvr-space-recorded;
       font-weight: 700;
     }
 
     p {
-      font-size: $font-dvr-space-percent;
       text-transform: uppercase;
     }
   }
@@ -135,7 +135,6 @@ export default {
     padding:6px 20px;
     background-color: $grey-cool-40;
     text-transform: uppercase;
-    font-size: $font-dvr-space-header;
     font-weight: 700;
     border-radius: 6px 6px 0 0;
   }
@@ -170,7 +169,6 @@ export default {
   &__option {
     margin-right: 20px;
     font-weight: 700;
-    font-size: $font-filters;
     text-transform: uppercase;
   }
 }
@@ -187,7 +185,6 @@ export default {
   .search {
     padding: 7px 15px;
     background-color: $grey-cool-40;
-    font-size: $font-field-placeholder;
     border-radius: 2px;
   }
 }

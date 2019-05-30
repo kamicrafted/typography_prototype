@@ -52,7 +52,7 @@ export default {
     
   },
   mounted () {
-    // alert(this.$store.state.bodyMD)
+    this.$parent.setFonts()
   }
 }
 </script>
