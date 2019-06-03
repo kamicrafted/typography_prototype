@@ -3,6 +3,7 @@
     <div @click="togglePanel" class="header">
       <div class="header__left">
         Configuration
+
       </div>
       <div class="header__right">
         <div v-if="!panelOpen" class="marker marker__plus"></div>
@@ -11,21 +12,21 @@
     </div>
     <transition name="fadeHeight">
       <div v-if="panelOpen" class="options">
-        <div v-for="n in hScale.length" :key="'hgroup-' + hScale[n - 1] + n | lowercase" class="options__item">
+        <div v-for="n in hScale.length" :key="'hgroup-' + hScale[n - 1].name + n | lowercase" class="options__item">
           <div class="label">
-            Headline {{hScale[n - 1]}}
+            Headline {{hScale[n - 1].name}}
           </div>
-          <select @change="updateSizing($event, 'headline' + hScale[n - 1])" class="select" :name="'headline-' + hScale[n - 1] | lowercase" id="headline-xs">
-            <option v-for="j in sizes.length" :key="'h-option-' + n + '-' + j | lowercase" :value="sizes[j - 1]">{{sizes[j - 1]}} px</option>
+          <select @change="updateSizing($event, 'headline' + hScale[n - 1].name)" class="select" :name="'headline-' + hScale[n - 1].name | lowercase" :id="'headline-' + hScale[n - 1].name | lowercase">
+            <option :selected="hScale[n - 1].px == sizes[j - 1]" v-for="j in sizes.length" :key="'h-option-' + n + '-' + j | lowercase" :value="sizes[j - 1]">{{sizes[j - 1]}}px</option>
           </select>
         </div>
 
-        <div v-for="n in bScale.length" :key="'bgroup-' + bScale[n - 1] + n | lowercase" class="options__item">
+        <div v-for="n in bScale.length" :key="'bgroup-' + bScale[n - 1].name + n | lowercase" class="options__item">
           <div class="label">
-            Body {{bScale[n - 1]}}
+            Body {{bScale[n - 1].name}}
           </div>
-          <select @change="updateSizing($event, 'body' + bScale[n - 1])" class="select" :name="'body-' + bScale[n - 1] | lowercase" id="body-xs">
-            <option v-for="j in sizes.length" :key="'b-option-' + n + '-' + j | lowercase" :value="sizes[j - 1]">{{sizes[j - 1]}} px</option>
+          <select @change="updateSizing($event, 'body' + bScale[n - 1].name)" class="select" :name="'body-' + bScale[n - 1].name | lowercase" :id="'body-' + bScale[n - 1].name | lowercase">
+            <option :selected="bScale[n - 1].px == sizes[j - 1]" v-for="j in sizes.length" :key="'b-option-' + n + '-' + j | lowercase" :value="sizes[j - 1]">{{sizes[j - 1]}}px</option>
           </select>
         </div>
       </div>
@@ -46,10 +47,10 @@ export default {
       return this.$store.state.sizeOptions
     },
     hScale () {
-      return this.$store.state.headlineScale
+      return this.$store.state.webSizes.headline
     },
     bScale () {
-      return this.$store.state.bodyScale
+      return this.$store.state.webSizes.body
     }
   },
   methods: {
@@ -60,6 +61,7 @@ export default {
     updateSizing: function (e, el) {
       if (e) {
         this.$store.commit('updateValue', {target: el, value: e.target.value})
+        console.log('el: ' + el + ' value: ' + e.target.value)
       }
       
       this.$parent.setFonts()

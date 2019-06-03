@@ -36,6 +36,10 @@ export default {
       this.HLG = document.querySelectorAll('.headline-lg');
       this.HXL = document.querySelectorAll('.headline-xl');
       this.HXXL = document.querySelectorAll('.headline-xxl');
+
+      // for (let i=0; i< this.HXS.length; i++) {
+      //   this.HXS[i].style.fontSize = this.$store.state.webSizes.headline[0].px + 'px';
+      // }
       
       for (let i=0; i< this.HXS.length; i++) {
         this.HXS[i].style.fontSize = this.$store.state.headlineXS + 'px';
