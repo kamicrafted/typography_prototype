@@ -59,29 +59,37 @@ export default new Vuex.Store({
 
     // size options
     sizeOptions: [12, 13, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50],
-    
-    // arrays to store DOM refs
-    HXS: [],
-    HSM: [],
-    HMD: [],
-    HLG: [],
-    HXL: [],
-    HXXL: [],
-    BXS: [],
-    BSM: [],
-    BMD: [],
-    BLG: [],
-    BXL: [],
+
+    showLabels: false // toggle style labels
   },
+
   mutations: {
-    updateValue (state, {target, value}) {
-      let temp = target.toString()
-      state[temp] = value
+    // updates stored value for target size
+    updateSize (state, {type, index, value}) {
+      console.log('old value ' + state.webSizes[type][index].px)
+      state.webSizes[type][index].px = value
+      console.log('new value: ' + state.webSizes[type][index].px)
+
+      console.log('updatingSize to type:' + type + ' index: ' + index + ' value: ' + value)
+    },
+
+    // traverses DOM for all matching elements and stores into an array
+    saveArray (state, {arr, selector}) {
+      // console.log('before' + state[arr.toString()].length)
+      state[arr.toString()] = document.querySelectorAll(selector.toString())
+      // console.log(state[arr.toString()])
+    },
+
+    toggleLabels (state) {
+      state.showLabels = !state.showLabels 
+      console.log('Labels are ' + state.showLabels)
     }
   },
+
   actions: {
 
   },
+
   getters: {
     // getSize: state => {
     //   return state.sizeOptions.find(sizeOptions)

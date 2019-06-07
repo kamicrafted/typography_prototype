@@ -1,7 +1,7 @@
 <template>
   <div class="banner">
     <div class="section-header">
-      <h2 class="headline-md">{{ sectionTitle }}</h2>
+      <h2 class="headline-md" :class="{ 'force-opacity': showLabels }">{{ sectionTitle }}</h2>
       <!-- <SeeMore /> -->
     </div>
 
@@ -11,8 +11,8 @@
 
         </div>
         <div class="message">
-          <h3 class="headline headline-lg">GET WATCHING</h3>
-          <p class="subhead body-md">
+          <h3 class="headline headline-lg" :class="{ 'force-opacity': showLabels }">GET WATCHING</h3>
+          <p class="subhead body-md" :class="{ 'force-opacity': showLabels }">
             If you leave a program midway, we'll hold your place!
           </p>
         </div>
@@ -26,9 +26,17 @@
 
 export default {
   name: 'carousel',
+
   props: ['section-title'],
+
   components : {
     // SeeMore
+  },
+
+  computed: {
+    showLabels () {
+      return this.$store.state.showLabels
+    }
   }
 }
 </script>

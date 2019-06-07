@@ -1,7 +1,7 @@
 <template>
   <div class="carousel">
     <div class="section-header">
-      <h2 class="headline-md">{{ sectionTitle }}</h2>
+      <h2 class="headline-md" :class="{ 'force-opacity': showLabels }">{{ sectionTitle }}</h2>
       <SeeMore />
     </div>
 
@@ -23,6 +23,7 @@ import Renderer from '@/components/web/Renderer';
 
 export default {
   name: 'carousel',
+
   props: {
     sectionTitle: {
       default: 'Title',
@@ -33,9 +34,16 @@ export default {
       type: Boolean
     }
   },
+
   components : {
     SeeMore,
     Renderer
+  },
+
+  computed: {
+    showLabels () {
+      return this.$store.state.showLabels
+    }
   }
 }
 </script>

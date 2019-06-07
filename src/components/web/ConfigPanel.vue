@@ -3,7 +3,6 @@
     <div @click="togglePanel" class="header">
       <div class="header__left">
         Configuration
-
       </div>
       <div class="header__right">
         <div v-if="!panelOpen" class="marker marker__plus"></div>
@@ -12,21 +11,47 @@
     </div>
     <transition name="fadeHeight">
       <div v-if="panelOpen" class="options">
-        <div v-for="n in hScale.length" :key="'hgroup-' + hScale[n - 1].name + n | lowercase" class="options__item">
-          <div class="label">
-            Headline {{hScale[n - 1].name}}
+        <div @click="toggleLabels" class="toggle">
+          <div class="toggle__left">
+            Show labels
           </div>
-          <select @change="updateSizing($event, 'headline' + hScale[n - 1].name)" class="select" :name="'headline-' + hScale[n - 1].name | lowercase" :id="'headline-' + hScale[n - 1].name | lowercase">
-            <option :selected="hScale[n - 1].px == sizes[j - 1]" v-for="j in sizes.length" :key="'h-option-' + n + '-' + j | lowercase" :value="sizes[j - 1]">{{sizes[j - 1]}}px</option>
+          <div class="toggle__right">
+            {{ showLabels }}
+          </div>
+        </div>
+        <div v-for="n in hScale.length" :key="'hgroup-' + hScale[n - 1].name + n | lowercase" class="options__item">
+          <label :for="'headline-' + hScale[n - 1].name | lowercase">Headline {{hScale[n - 1].name}}</label>
+
+          <select class="select" 
+                  @change="updateSizing($event, 'headline', n - 1)"
+                  :name="'headline-' + hScale[n - 1].name | lowercase" 
+                  :id="'headline-' + hScale[n - 1].name | lowercase"
+                  
+                  >
+            <option v-for="j in sizes.length" 
+                    :selected="sizes[j - 1] == hScale[n - 1].px"
+                    :key="'option-' + n + j"
+                    :value="sizes[j-1]">
+              {{ sizes[j-1] }}px
+            </option>
           </select>
         </div>
 
         <div v-for="n in bScale.length" :key="'bgroup-' + bScale[n - 1].name + n | lowercase" class="options__item">
-          <div class="label">
-            Body {{bScale[n - 1].name}}
-          </div>
-          <select @change="updateSizing($event, 'body' + bScale[n - 1].name)" class="select" :name="'body-' + bScale[n - 1].name | lowercase" :id="'body-' + bScale[n - 1].name | lowercase">
-            <option :selected="bScale[n - 1].px == sizes[j - 1]" v-for="j in sizes.length" :key="'b-option-' + n + '-' + j | lowercase" :value="sizes[j - 1]">{{sizes[j - 1]}}px</option>
+          <label :for="'body-' + bScale[n - 1].name | lowercase">Body {{bScale[n - 1].name}}</label>
+
+          <select class="select" 
+                  @change="updateSizing($event, 'body', n - 1)"
+                  :name="'body-' + bScale[n - 1].name | lowercase" 
+                  :id="'body-' + bScale[n - 1].name | lowercase"
+                  
+                  >
+            <option v-for="j in sizes.length" 
+                    :selected="sizes[j - 1] == bScale[n - 1].px"
+                    :key="'option-' + n + j"
+                    :value="sizes[j-1]">
+              {{ sizes[j-1] }}px
+            </option>
           </select>
         </div>
       </div>
@@ -39,18 +64,25 @@ export default {
   name: 'config-panel',
   data: function () {
     return {
-      panelOpen: false,
+      panelOpen: false, // toggle config panel
     }
   },
   computed: {
+    // fetch font size options from sizeOptions
     sizes () {
       return this.$store.state.sizeOptions
     },
+
     hScale () {
       return this.$store.state.webSizes.headline
     },
+    
     bScale () {
       return this.$store.state.webSizes.body
+    },
+
+    showLabels () {
+      return this.$store.state.showLabels
     }
   },
   methods: {
@@ -58,13 +90,16 @@ export default {
       this.panelOpen = !this.panelOpen
     },
 
-    updateSizing: function (e, el) {
+    updateSizing: function (e, type, index) {
       if (e) {
-        this.$store.commit('updateValue', {target: el, value: e.target.value})
-        console.log('el: ' + el + ' value: ' + e.target.value)
+        this.$store.commit('updateSize', {type: type, index: index, value: e.target.value})
       }
       
-      this.$parent.setFonts()
+      this.$parent.initFonts()
+    },
+
+    toggleLabels: function () {
+      this.$store.commit('toggleLabels')
     }
   },
   filters: {
@@ -75,7 +110,7 @@ export default {
     }
   },
   mounted () {
-    this.updateSizing()
+    // this.updateSizing()
   }
 }
 </script>
@@ -104,14 +139,35 @@ export default {
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    background: white;
-    color: black;
+    background-color: $nu-blue-100;
+    color: white;
     border-radius: 4px 4px 0 0;
     border-bottom: 1px solid rgba(black, .1);
     font-weight: bold;
     font-size: 12px;
     text-transform: uppercase;
     cursor: pointer;
+  }
+
+  .toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: $nu-blue-180;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &__left {
+
+    }
+
+    &__right {
+      
+    }
   }
 }
 

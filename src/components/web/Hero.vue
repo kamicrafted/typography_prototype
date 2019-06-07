@@ -1,10 +1,10 @@
 <template>
   <div class="hero">
     <div class="info">
-      <p class="subhead headline-lg">{{ subhead }}</p>
-      <h1 class="title headline-xxl">{{ title }}</h1>
+      <p class="subhead headline-lg" :class="{ 'force-opacity': showLabels }">{{ subhead }}</p>
+      <h1 class="title headline-xxl" :class="{ 'force-opacity': showLabels }">{{ title }}</h1>
 
-      <a class="button button--cta headline-sm" href="">Learn more</a>
+      <a class="button button--cta headline-sm" :class="{ 'force-opacity': showLabels }" href="">Learn more</a>
     </div>
 
     <div class="cards">
@@ -16,8 +16,8 @@
 
         </div>
         <div class="info">
-          <h2 class="title headline-md">See Upcoming Matches in 4K</h2>
-          <p class="subhead body-md">
+          <h2 class="title headline-md" :class="{ 'force-opacity': showLabels }">See Upcoming Matches in 4K</h2>
+          <p class="subhead body-md" :class="{ 'force-opacity': showLabels }">
             4K presented by the all new Lex...
           </p>
         </div>
@@ -29,6 +29,7 @@
 <script>
 export default {
   name: 'hero',
+
   props: {
     title: {
       default: 'Program Title',
@@ -37,6 +38,12 @@ export default {
     subhead: {
       default: 'Program subhead',
       type: String
+    }
+  },
+
+  computed: {
+    showLabels () {
+      return this.$store.state.showLabels
     }
   }
 }

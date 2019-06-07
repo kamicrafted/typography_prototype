@@ -1,7 +1,7 @@
 <template>
   <div class="caoursel">
     <div class="section-header">
-      <h2 class="headline-md">{{ sectionTitle }}</h2>
+      <h2 class="headline-md" :class="{ 'force-opacity': showLabels }">{{ sectionTitle }}</h2>
       <SeeMore />
     </div>
 
@@ -35,10 +35,18 @@ import RendererLeague from '@/components/web/RendererLeague';
 
 export default {
   name: 'carousel',
+
   props: ['section-title'],
+
   components : {
     SeeMore,
     RendererLeague
+  },
+
+  computed: {
+    showLabels () {
+      return this.$store.state.showLabels
+    }
   }
 }
 </script>

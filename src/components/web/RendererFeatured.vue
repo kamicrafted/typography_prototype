@@ -4,7 +4,7 @@
 
     </div>
 
-    <div class="title headline-sm">
+    <div class="title headline-sm" :class="{ 'force-opacity': showLabels }">
       {{ title }}
     </div>
   </div>
@@ -13,10 +13,17 @@
 <script>
 export default {
   name: 'renderer-featured',
+
   props: {
     title: {
       default: 'Program Title',
       type: String
+    }
+  },
+
+  computed: {
+    showLabels () {
+      return this.$store.state.showLabels
     }
   }
 }

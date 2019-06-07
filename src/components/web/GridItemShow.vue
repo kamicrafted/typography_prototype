@@ -2,13 +2,14 @@
   <div class="grid-item">
     <div class="thumbnail"></div>
 
-    <h2 class="program-title headline-sm">{{ title }}</h2>
+    <h2 class="program-title headline-sm" :class="{ 'force-opacity': showLabels }">{{ title }}</h2>
   </div>
 </template>
 
 <script>
 export default {
   name: 'renderer',
+
   props: {
     title: {
       default: 'Program Title',
@@ -17,6 +18,12 @@ export default {
     showNetworkBar: {
       default: false,
       type: Boolean
+    }
+  },
+
+  computed: {
+    showLabels () {
+      return this.$store.state.showLabels
     }
   }
 }

@@ -6,12 +6,12 @@
     <div class="meta">
       <div class="primary">
         <div class="airing">
-          <span class="date body-xs">Tonight</span>
-          <span class="time body-xs">8:30PM</span>
+          <span class="date body-xs" :class="{ 'force-opacity': showLabels }">Tonight</span>
+          <span class="time body-xs" :class="{ 'force-opacity': showLabels }">8:30PM</span>
         </div>
-        <h2 class="program-title headline-sm">{{ title }}</h2>
+        <h2 class="program-title headline-sm" :class="{ 'force-opacity': showLabels }">{{ title }}</h2>
       </div>
-      <p class="secondary body-xs">
+      <p class="secondary body-xs" :class="{ 'force-opacity': showLabels }">
         2007 | PG
       </p>
     </div>
@@ -21,12 +21,19 @@
 <script>
   export default {
     name: 'renderer-movie',
+
     props: {
       title: {
         default: 'Program Title',
         type: String
       }
+    },
+
+    computed: {
+    showLabels () {
+      return this.$store.state.showLabels
     }
+  }
   }
 </script>
 

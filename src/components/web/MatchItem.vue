@@ -1,19 +1,19 @@
 <template>
   <div class="item">
     <div class="status">
-      <p class="slot body-sm">8:30 PM</p>
-      <div class="league body-sm">Ecuadorian Serie A Soccer</div>
+      <p class="slot body-sm" :class="{ 'force-opacity': showLabels }">8:30 PM</p>
+      <div class="league body-sm" :class="{ 'force-opacity': showLabels }">Ecuadorian Serie A Soccer</div>
     </div>
 
     <div class="matchup">
       <div class="team1">
-        <h3 class="headline-sm">Orlando City SC</h3>
+        <h3 class="headline-sm" :class="{ 'force-opacity': showLabels }">Orlando City SC</h3>
         <div class="logo"></div>
       </div>
-      <div class="vs headline-xs">vs</div>
+      <div class="vs headline-xs" :class="{ 'force-opacity': showLabels }">vs</div>
       <div class="team2">
         <div class="logo"></div>
-        <h3 class="headline-sm">LA Galaxy</h3>
+        <h3 class="headline-sm" :class="{ 'force-opacity': showLabels }">LA Galaxy</h3>
       </div>
     </div>
 
@@ -22,8 +22,8 @@
     </div>
 
     <div class="action">
-      <a class="button button--cta headline-xs" href="/" v-if="cta === 'Watch Live'">{{ cta }}</a>
-      <a class="button button--record headline-xs" href="/" v-else>{{ cta }}</a>
+      <a class="button button--cta headline-xs" :class="{ 'force-opacity': showLabels }" href="/" v-if="cta === 'Watch Live'">{{ cta }}</a>
+      <a class="button button--record headline-xs" :class="{ 'force-opacity': showLabels }" href="/" v-else>{{ cta }}</a>
     </div>
   </div>
 </template>
@@ -31,10 +31,17 @@
 <script>
 export default {
   name: 'match-item',
+
   props: {
     cta: {
       default: 'Record',
       type: String
+    }
+  },
+
+  computed: {
+    showLabels () {
+      return this.$store.state.showLabels
     }
   }
 }

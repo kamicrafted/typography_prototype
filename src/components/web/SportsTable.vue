@@ -2,15 +2,15 @@
   <div class="table">
     <div class="table__head">
       <div class="dates">
-        <div class="prev headline-sm">
+        <div class="prev headline-sm" :class="{ 'force-opacity': showLabels }">
           Thu, May 23
         </div>
 
-        <div class="current headline-sm">
+        <div class="current headline-sm" :class="{ 'force-opacity': showLabels }">
           Today, May 24
         </div>
 
-        <div class="next headline-sm">
+        <div class="next headline-sm" :class="{ 'force-opacity': showLabels }">
           Sat, May 25
         </div>
       </div>
@@ -50,8 +50,15 @@ import MatchItem from '@/components/web/MatchItem'
 
 export default {
   name: 'sports-table',
+
   components: {
     MatchItem
+  },
+
+  computed: {
+    showLabels () {
+      return this.$store.state.showLabels
+    }
   }
 }
 </script>

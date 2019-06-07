@@ -1,12 +1,18 @@
 <template>
   <div>
-    <a href="/" class="more body-sm">See more</a>
+    <a href="/" class="more body-sm" :class="{ 'force-opacity': showLabels }">See more</a>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'see-more'
+  name: 'see-more',
+
+  computed: {
+    showLabels () {
+      return this.$store.state.showLabels
+    }
+  }
 }
 </script>
 

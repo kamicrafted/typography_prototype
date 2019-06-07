@@ -2,8 +2,8 @@
   <div class="home">
     <SiteHeader />
     <div class="page-header">
-      <h1 class="headline-lg">My Videos</h1>
-      <div class="faq headline-sm">
+      <h1 class="headline-lg" :class="{ 'force-opacity': showLabels }">My Videos</h1>
+      <div class="faq headline-sm" :class="{ 'force-opacity': showLabels }">
         My Videos FAQs
       </div>
     </div>
@@ -12,17 +12,17 @@
       <div class="list">
         <div class="utility">
           <div class="filters">
-            <div class="filters__option headline-xs">All</div>
-            <div class="filters__option headline-xs">Sports</div>
-            <div class="filters__option headline-xs">Shows</div>
-            <div class="filters__option headline-xs">Movies</div>
+            <div class="filters__option headline-xs" :class="{ 'force-opacity': showLabels }">All</div>
+            <div class="filters__option headline-xs" :class="{ 'force-opacity': showLabels }">Sports</div>
+            <div class="filters__option headline-xs" :class="{ 'force-opacity': showLabels }">Shows</div>
+            <div class="filters__option headline-xs" :class="{ 'force-opacity': showLabels }">Movies</div>
           </div>
 
-          <div class="search body-sm">
+          <div class="search body-sm" :class="{ 'force-opacity': showLabels }">
             Find by title, team, league or channel
           </div>
 
-          <div class="dropdown body-sm">
+          <div class="dropdown body-sm" :class="{ 'force-opacity': showLabels }">
             All Videos
           </div>
         </div>
@@ -34,10 +34,10 @@
 
       <div class="dvr">
         <div class="space">
-          <h3 class="headline-xs">Cloud DVR Space</h3>
+          <h3 class="headline-xs" :class="{ 'force-opacity': showLabels }">Cloud DVR Space</h3>
           <div class="recorded">
-            <h4 class="headline-lg">15.4 of 500</h4>
-            <p class="body-sm">Hours recorded (3%)</p>
+            <h4 class="headline-lg" :class="{ 'force-opacity': showLabels }">15.4 of 500</h4>
+            <p class="body-sm" :class="{ 'force-opacity': showLabels }">Hours recorded (3%)</p>
 
             <div class="meter">
             </div>
@@ -57,13 +57,21 @@ import DVRItem from '@/components/web/DVRItem';
 
 export default {
   name: 'my-videos',
+
   components: {
     SiteHeader,
     SiteFooter,
     DVRItem
   },
+  
   mounted () {
-    this.$parent.setFonts()
+    this.$parent.initFonts()
+  },
+
+  computed: {
+    showLabels () {
+      return this.$store.state.showLabels
+    }
   }
 }
 </script>

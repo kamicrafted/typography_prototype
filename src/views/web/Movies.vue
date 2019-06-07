@@ -10,12 +10,12 @@
 
       <div class="browse">
         <div class="section-header">
-          <h2 class="headline-md">Movies on Demand</h2>
+          <h2 class="headline-md" :class="{ 'force-opacity': showLabels }">Movies on Demand</h2>
         </div>
 
         <div class="filter-bar">
           <div class="icon"></div>
-          <div class="option headline-sm" v-for="n in 20" :key="n">Option</div>
+          <div class="option headline-sm" :class="{ 'force-opacity': showLabels }" v-for="n in 20" :key="n">Option</div>
         </div>
 
         <Grid type="movie" />
@@ -42,8 +42,15 @@ export default {
     CarouselMovie,
     Grid
   },
+
   mounted () {
-    this.$parent.setFonts()
+    this.$parent.initFonts()
+  },
+
+  computed: {
+    showLabels () {
+      return this.$store.state.showLabels
+    }
   }
 }
 </script>

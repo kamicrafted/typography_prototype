@@ -1,7 +1,7 @@
 <template>
   <div class="content-item">
     <div class="logo"></div>
-    <div class="label headline-sm">
+    <div class="label headline-sm" :class="{ 'force-opacity': showLabels }">
       {{ title }}
     </div>
   </div>
@@ -10,10 +10,17 @@
 <script>
 export default {
   name: 'renderer-league',
+
   props: {
     title: {
       default: 'League Name',
       type: String
+    }
+  },
+
+  computed: {
+    showLabels () {
+      return this.$store.state.showLabels
     }
   }
 }

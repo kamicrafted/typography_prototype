@@ -12,80 +12,87 @@ export default {
   name: 'app',
   data: function () {
     return {
-      HXS: null,
-      HSM: null,
-      HMD: null,
-      HLG: null,
-      HXL: null,
-      HXXL: null,
-      BXS: null,
-      BSM: null,
-      BMD: null,
-      BLG: null,
-      BXL: null,
+      headlineNames: [],
+      headlineValues: [],
+      bodyNames: [],
+      bodyValues: [],
     }
   },
   components: {
     ConfigPanel
   },
   methods: {
+    initFonts: function () {
+      // ===============================================
+      // HEADLINES
+      // ===============================================
+      console.log('::::: Setting up headline')
+
+      // store values into stored arrays
+      for (let i=0; i< this.$store.state.webSizes.headline.length; i++) {
+        let selector = ('.headline-' + this.$store.state.webSizes.headline[i].name).toLowerCase()
+        // console.log(selector)
+
+        let arrayName = 'H' + this.$store.state.webSizes.headline[i].name
+        // console.log(arrayName)
+
+        this.headlineValues[i] = this.$store.state.webSizes.headline[i].px
+        this.headlineNames[i] = 'H' + this.$store.state.webSizes.headline[i].name
+
+        this.$store.commit('saveArray', {arr: arrayName, selector: selector})
+
+        // ******************************
+        // output all headline array elements
+        // ******************************
+        // console.log('Array ' + arrayName + ' --------------------------------------')
+        // console.log(this.$store.state[arrayName])
+      }
+
+      // set element sizes
+      for (let k=0; k < this.headlineNames.length; k++) {
+        for (let m=0; m < this.$store.state[this.headlineNames[k]].length; m++) {
+          this.$store.state[this.headlineNames[k]][m].style.fontSize = this.headlineValues[k] + 'px'
+          console.log(this.headlineNames[k] + '        ' + this.headlineValues[k] + 'px')
+        }
+      }
+
+      // ===============================================
+      // BODY
+      // ===============================================
+      console.log('::::: Setting up body')
+      for (let i=0; i< this.$store.state.webSizes.body.length; i++) {
+        let selector = ('.body-' + this.$store.state.webSizes.body[i].name).toLowerCase()
+        // console.log(selector)
+
+        let arrayName = 'B' + this.$store.state.webSizes.body[i].name
+        // console.log(arrayName)
+
+        this.bodyValues[i] = this.$store.state.webSizes.body[i].px
+        this.bodyNames[i] = 'B' + this.$store.state.webSizes.body[i].name
+
+        this.$store.commit('saveArray', {arr: arrayName, selector: selector})
+
+        // set element sizes
+        for (let k=0; k < this.bodyNames.length; k++) {
+          for (let m=0; m < this.$store.state[this.bodyNames[k]].length; m++) {
+            this.$store.state[this.bodyNames[k]][m].style.fontSize = this.bodyValues[k] + 'px'
+            console.log(this.bodyNames[k] + '        ' + this.bodyValues[k] + 'px')
+          }
+        }
+
+        // ******************************
+        // output all body array elements
+        // ******************************
+        // console.log(this.$store.state[arrayName])
+      }
+    },
+
     setFonts: function () {
-      this.HXS = document.querySelectorAll('.headline-xs');
-      this.HSM = document.querySelectorAll('.headline-sm');
-      this.HMD = document.querySelectorAll('.headline-md');
-      this.HLG = document.querySelectorAll('.headline-lg');
-      this.HXL = document.querySelectorAll('.headline-xl');
-      this.HXXL = document.querySelectorAll('.headline-xxl');
-
-      // for (let i=0; i< this.HXS.length; i++) {
-      //   this.HXS[i].style.fontSize = this.$store.state.webSizes.headline[0].px + 'px';
-      // }
-      
-      for (let i=0; i< this.HXS.length; i++) {
-        this.HXS[i].style.fontSize = this.$store.state.headlineXS + 'px';
-      }
-      for (let i=0; i< this.HSM.length; i++) {
-        this.HSM[i].style.fontSize = this.$store.state.headlineSM + 'px';
-      }
-      for (let i=0; i< this.HMD.length; i++) {
-        this.HMD[i].style.fontSize = this.$store.state.headlineMD + 'px';
-      }
-      for (let i=0; i< this.HLG.length; i++) {
-        this.HLG[i].style.fontSize = this.$store.state.headlineLG + 'px';
-      }
-      for (let i=0; i< this.HXL.length; i++) {
-        this.HXL[i].style.fontSize = this.$store.state.headlineXL + 'px';
-      }
-      for (let i=0; i< this.HXXL.length; i++) {
-        this.HXXL[i].style.fontSize = this.$store.state.headlineXXL + 'px';
-      }
-      
-      
-      this.BXS = document.querySelectorAll('.body-xs');
-      this.BSM = document.querySelectorAll('.body-sm');
-      this.BMD = document.querySelectorAll('.body-md');
-      this.BLG = document.querySelectorAll('.body-lg');
-      this.BXL = document.querySelectorAll('.body-xl');
-
-      for (let i=0; i< this.BXS.length; i++) {
-        this.BXS[i].style.fontSize = this.$store.state.bodyXS + 'px';
-      }
-      for (let i=0; i< this.BSM.length; i++) {
-        this.BSM[i].style.fontSize = this.$store.state.bodySM + 'px';
-      }
-      for (let i=0; i< this.BMD.length; i++) {
-        this.BMD[i].style.fontSize = this.$store.state.bodyMD + 'px';
-      }
-      for (let i=0; i< this.BLG.length; i++) {
-        this.BLG[i].style.fontSize = this.$store.state.bodyLG + 'px';
-      }
-      for (let i=0; i< this.BXL.length; i++) {
-        this.BXL[i].style.fontSize = this.$store.state.bodyXL + 'px';
-      }
+      console.log('setFonts called')
     },
   },
   mounted () {
-    this.setFonts();
+    this.initFonts();
   }
 }
 </script>
@@ -102,14 +109,26 @@ export default {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.headline-xs {
+.headline-xs,
+.headline-sm,
+.headline-md,
+.headline-lg,
+.headline-xl,
+.headline-xxl,
+.body-xs,
+.body-sm,
+.body-md,
+.body-lg,
+.body-xl,
+.body-xxl {
   position: relative;
 
   &:before {
-    content: "headline-xs";
     position: absolute;
-    background: white;
-    color: black;
+    z-index: 100;
+    background: black;
+    color: white;
+    border: 2px solid rgba(white, .1);
     padding: 5px;
     font-size: 10px;
     font-weight: normal;
@@ -119,250 +138,85 @@ export default {
     transition: all 15s eases-in-out;
     pointer-events: none;
     top: -15px;
+    border-radius: 4px;
+    min-width: 40px;
+    text-align: center;
+    transition: all .15s ease-out;
   }
-  
+
   &:hover:before {
     opacity: 1;
+    top: 15px;
+  }
+
+  &.force-opacity:before {
+    opacity: 1 !important;
+  }
+}
+
+.headline-xs {
+  &:before {
+    content: "h-xs";
   }
 }
 
 .headline-sm {
-  position: relative;
-
   &:before {
-    content: "headline-sm";
-    position: absolute;
-    background: white;
-    color: black;
-    padding: 5px;
-    font-size: 10px;
-    font-weight: normal;
-    font-family: arial;
-    opacity: 0;
-    text-transform: uppercase;
-    transition: all 15s eases-in-out;
-    pointer-events: none;
-    top: -15px;
-  }
-  
-  &:hover:before {
-    opacity: 1;
+    content: "h-sm";
   }
 }
 
 .headline-md {
-  position: relative;
-
   &:before {
-    content: "headline-md";
-    position: absolute;
-    background: white;
-    color: black;
-    padding: 5px;
-    font-size: 10px;
-    font-weight: normal;
-    font-family: arial;
-    opacity: 0;
-    text-transform: uppercase;
-    transition: all 15s eases-in-out;
-    pointer-events: none;
-    top: -15px;
-  }
-  
-  &:hover:before {
-    opacity: 1;
+    content: "h-md";
   }
 }
 
 .headline-lg {
-  position: relative;
-
   &:before {
-    content: "headline-lg";
-    position: absolute;
-    background: white;
-    color: black;
-    padding: 5px;
-    font-size: 10px;
-    font-weight: normal;
-    font-family: arial;
-    opacity: 0;
-    text-transform: uppercase;
-    transition: all 15s eases-in-out;
-    pointer-events: none;
-    top: -15px;
-  }
-  
-  &:hover:before {
-    opacity: 1;
+    content: "h-lg";
   }
 }
 
 .headline-xl {
-  position: relative;
-
   &:before {
-    content: "headline-xl";
-    position: absolute;
-    background: white;
-    color: black;
-    padding: 5px;
-    font-size: 10px;
-    font-weight: normal;
-    font-family: arial;
-    opacity: 0;
-    text-transform: uppercase;
-    transition: all 15s eases-in-out;
-    pointer-events: none;
-    top: -15px;
-  }
-  
-  &:hover:before {
-    opacity: 1;
+    content: "h-xl";
   }
 }
 
 .headline-xxl {
-  position: relative;
-
   &:before {
-    content: "headline-xxl";
-    position: absolute;
-    background: white;
-    color: black;
-    padding: 5px;
-    font-size: 10px;
-    font-weight: normal;
-    font-family: arial;
-    opacity: 0;
-    text-transform: uppercase;
-    transition: all 15s eases-in-out;
-    pointer-events: none;
-    top: -15px;
-  }
-  
-  &:hover:before {
-    opacity: 1;
+    content: "h-xxl";
   }
 }
 
 .body-xs {
-  position: relative;
-
   &:before {
-    content: "body-xs";
-    position: absolute;
-    background: white;
-    color: black;
-    padding: 5px;
-    font-size: 10px;
-    font-weight: normal;
-    font-family: arial;
-    opacity: 0;
-    text-transform: uppercase;
-    transition: all 15s eases-in-out;
-    pointer-events: none;
-    top: -15px;
-  }
-  
-  &:hover:before {
-    opacity: 1;
+    content: "b-xs";
   }
 }
 
 .body-sm {
-  position: relative;
-
   &:before {
-    content: "body-sm";
-    position: absolute;
-    background: white;
-    color: black;
-    padding: 5px;
-    font-size: 10px;
-    font-weight: normal;
-    font-family: arial;
-    opacity: 0;
-    text-transform: uppercase;
-    transition: all 15s eases-in-out;
-    pointer-events: none;
-    top: -15px;
-  }
-  
-  &:hover:before {
-    opacity: 1;
+    content: "b-sm";
   }
 }
 
 .body-md {
-  position: relative;
-
   &:before {
-    content: "body-md";
-    position: absolute;
-    background: white;
-    color: black;
-    padding: 5px;
-    font-size: 10px;
-    font-weight: normal;
-    font-family: arial;
-    opacity: 0;
-    text-transform: uppercase;
-    transition: all 15s eases-in-out;
-    pointer-events: none;
-    top: -15px;
-  }
-  
-  &:hover:before {
-    opacity: 1;
+    content: "b-md";
   }
 }
 
 .body-lg {
-  position: relative;
-
   &:before {
-    content: "body-lg";
-    position: absolute;
-    background: white;
-    color: black;
-    padding: 5px;
-    font-size: 10px;
-    font-weight: normal;
-    font-family: arial;
-    opacity: 0;
-    text-transform: uppercase;
-    transition: all 15s eases-in-out;
-    pointer-events: none;
-    top: -15px;
-  }
-  
-  &:hover:before {
-    opacity: 1;
+    content: "b-lg";
   }
 }
 
-.body-lg {
-  position: relative;
-
+.body-xl {
   &:before {
-    content: "body-xl";
-    position: absolute;
-    background: white;
-    color: black;
-    padding: 5px;
-    font-size: 10px;
-    font-weight: normal;
-    font-family: arial;
-    opacity: 0;
-    text-transform: uppercase;
-    transition: all 15s eases-in-out;
-    pointer-events: none;
-    top: -15px;
-  }
-  
-  &:hover:before {
-    opacity: 1;
+    content: "b-xl";
   }
 }
 </style>

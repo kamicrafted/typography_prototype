@@ -41,7 +41,7 @@ export default {
     CarouselLeague
   },
   mounted () {
-    this.$parent.setFonts()
+    this.$parent.initFonts()
   }
 }
 </script>

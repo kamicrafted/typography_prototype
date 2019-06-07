@@ -6,21 +6,21 @@
       </router-link>
 
       <nav class="nav">
-        <router-link class="headline-xs" to="/web/sports">Sports</router-link>
-        <router-link class="headline-xs" to="/web/shows">Shows</router-link>
-        <router-link class="headline-xs" to="/web/movies">Movies</router-link>
-        <router-link class="headline-xs" to="/web/guide">Guide</router-link>
-        <router-link class="headline-xs" to="/web/myvideos">My Videos</router-link>
+        <router-link class="headline-xs" :class="{ 'force-opacity': showLabels }" to="/web/sports">Sports</router-link>
+        <router-link class="headline-xs" :class="{ 'force-opacity': showLabels }" to="/web/shows">Shows</router-link>
+        <router-link class="headline-xs" :class="{ 'force-opacity': showLabels }" to="/web/movies">Movies</router-link>
+        <router-link class="headline-xs" :class="{ 'force-opacity': showLabels }" to="/web/guide">Guide</router-link>
+        <router-link class="headline-xs" :class="{ 'force-opacity': showLabels }" to="/web/myvideos">My Videos</router-link>
       </nav>
     </div>
     <div class="header__right">
-      <div class="search body-sm"></div>
+      <div class="search body-sm" :class="{ 'force-opacity': showLabels }"></div>
       <div class="account">
-        <p class="headline-xs">Hi, David</p>
+        <p class="headline-xs" :class="{ 'force-opacity': showLabels }">Hi, David</p>
       </div>
 
       <div class="help">
-        <p class="headline-xs">Help</p>
+        <p class="headline-xs" :class="{ 'force-opacity': showLabels }">Help</p>
       </div>
     </div>
   </header>
@@ -28,7 +28,13 @@
 
 <script>
 export default {
-  name: 'site-header'
+  name: 'site-header',
+
+  computed: {
+    showLabels () {
+      return this.$store.state.showLabels
+    }
+  }
 }
 </script>
 

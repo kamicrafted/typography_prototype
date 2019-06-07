@@ -11,12 +11,12 @@
     <div class="meta">
       <div class="primary">
         <div class="airing body-xs">
-          <span class="date body-xs">Tonight</span>
-          <span class="time body-xs">8:30PM</span>
+          <span class="date body-xs" :class="{ 'force-opacity': showLabels }">Tonight</span>
+          <span class="time body-xs" :class="{ 'force-opacity': showLabels }">8:30PM</span>
         </div>
         <h2 class="program-title headline-sm">{{ title }}</h2>
       </div>
-      <p class="secondary body-xs">
+      <p class="secondary body-xs" :class="{ 'force-opacity': showLabels }">
         S2, EP12 "A Tummy Ache and a Whale of a M...
       </p>
     </div>
@@ -26,14 +26,22 @@
 <script>
 export default {
   name: 'renderer',
+
   props: {
     title: {
       default: 'Program Title',
       type: String
     },
+
     showNetworkBar: {
       default: false,
       type: Boolean
+    }
+  },
+
+  computed: {
+    showLabels () {
+      return this.$store.state.showLabels
     }
   }
 }
