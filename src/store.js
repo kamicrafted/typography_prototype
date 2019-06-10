@@ -5,6 +5,13 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    sizeOptions: [8, 9, 10, 11, 12, 13, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50], // size options
+
+    showLabels: false, // toggle style labels
+
+    platform: null, // sets device platform
+    platformSizes: null, // sets platform array
+
     webSizes: {
       headline: [
         {
@@ -57,18 +64,71 @@ export default new Vuex.Store({
       ]
     },
 
-    // size options
-    sizeOptions: [12, 13, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50],
+    mobileSizes: {
+      headline: [
+        {
+          name: 'XXS',
+          px: 8
+        },
+        {
+          name: 'XS',
+          px: 12
+        },
+        {
+          name: 'SM',
+          px: 14
+        },
+        {
+          name: 'MD',
+          px: 14
+        },
+        {
+          name: 'LG',
+          px: 16
+        },
+        {
+          name: 'XL',
+          px: 18
+        },
+        {
+          name: 'XXL',
+          px: 12
+        }
+      ],
 
-    showLabels: false // toggle style labels
+      body: [
+        {
+          name: 'XS',
+          px: 12
+        },
+        {
+          name: 'SM',
+          px: 12
+        },
+        {
+          name: 'MD',
+          px: 12
+        },
+        {
+          name: 'LG',
+          px: 12
+        },
+        {
+          name: 'XL',
+          px: 12
+        },
+      ]
+    },
   },
 
   mutations: {
     // updates stored value for target size
     updateSize (state, {type, index, value}) {
-      console.log('old value ' + state.webSizes[type][index].px)
-      state.webSizes[type][index].px = value
-      console.log('new value: ' + state.webSizes[type][index].px)
+      state.platformSizes = (state.platform).toString() + 'Sizes'
+
+      console.log('old value ' + state[state.platformSizes][type][index].px)
+      state[state.platformSizes][type][index].px = value
+      console.log('new value: ' + state[state.platformSizes][type][index].px)
 
       console.log('updatingSize to type:' + type + ' index: ' + index + ' value: ' + value)
     },
@@ -83,6 +143,12 @@ export default new Vuex.Store({
     toggleLabels (state) {
       state.showLabels = !state.showLabels 
       console.log('Labels are ' + state.showLabels)
+    },
+
+    // set device platform to load related data
+    setPlatform (state, platform) {
+      console.log('Current platform is ' + platform)
+      state.platform = platform
     }
   },
 

@@ -1,8 +1,9 @@
 <template>
-  <div class="home">
+  <div class="web movies">
     <SiteHeader />
 
     <Hero title="MEN IN BLACK" subhead="Secret agents monitor extraterrestrial activity on Earth." /> 
+    
     <div class="content">
       <CarouselMovie section-title="Live Now" />
       <CarouselMovie section-title="Popular" />
@@ -34,7 +35,10 @@ import CarouselMovie from '@/components/web/CarouselMovie';
 import Grid from '@/components/web/Grid';
 
 export default {
-  name: 'web',
+  name: 'web-movies',
+
+  props: ['platform'],
+
   components: {
     SiteHeader,
     SiteFooter,
@@ -43,15 +47,16 @@ export default {
     Grid
   },
 
-  mounted () {
-    this.$parent.initFonts()
-  },
-
   computed: {
     showLabels () {
       return this.$store.state.showLabels
     }
-  }
+  },
+
+  mounted () {
+    this.$store.commit('setPlatform', this.platform)
+    this.$parent.initFonts()
+  },
 }
 </script>
 

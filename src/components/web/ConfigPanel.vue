@@ -62,11 +62,15 @@
 <script>
 export default {
   name: 'config-panel',
+
   data: function () {
     return {
       panelOpen: false, // toggle config panel
+      currentPlatform: null,
+      platformSizes: null,
     }
   },
+
   computed: {
     // fetch font size options from sizeOptions
     sizes () {
@@ -74,19 +78,29 @@ export default {
     },
 
     hScale () {
-      return this.$store.state.webSizes.headline
+      return this.$store.state[this.platformSizes].headline
     },
     
     bScale () {
-      return this.$store.state.webSizes.body
+      return this.$store.state[this.platformSizes].body
     },
 
     showLabels () {
       return this.$store.state.showLabels
     }
   },
+
   methods: {
+    initPlatformSizes: function () {
+      this.currentPlatform = this.$store.state.platform
+      this.platformSizes = (this.currentPlatform).toString() + 'Sizes'
+
+      console.log('***** Setting up headlines for ' + this.currentPlatform)
+      console.log(this.platformSizes)
+    },
+
     togglePanel: function () {
+      this.initPlatformSizes()
       this.panelOpen = !this.panelOpen
     },
 
@@ -102,6 +116,7 @@ export default {
       this.$store.commit('toggleLabels')
     }
   },
+
   filters: {
     lowercase: function (value) {
       if (!value) return ''
@@ -109,6 +124,7 @@ export default {
       return value.toLowerCase()
     }
   },
+
   mounted () {
     // this.updateSizing()
   }

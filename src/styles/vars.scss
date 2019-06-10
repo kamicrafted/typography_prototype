@@ -15,6 +15,7 @@ $grey-cool-180: #E1E3E4;
 $orange-100: #FA4616;
 $nu-blue-100: #1C7AE4;
 $nu-blue-180: #D2E4FA;
+$nu-purple-100: #4428A7;
 
 $color-bg: $grey-cool-0;
 $color-body: $grey-cool-180;
@@ -27,3 +28,9 @@ $color-border-light: $grey-cool-160;
 // Typography
 // ------------------------------------
 $font-body: 16px; // default body
+
+// ------------------------------------
+// Typography
+// ------------------------------------
+$mobile-gutter: 16px;
+$mobile-width: 375px; // iphone X: 375px

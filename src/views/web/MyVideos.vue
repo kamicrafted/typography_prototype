@@ -1,6 +1,7 @@
 <template>
-  <div class="home">
+  <div class="web my-videos">
     <SiteHeader />
+
     <div class="page-header">
       <h1 class="headline-lg" :class="{ 'force-opacity': showLabels }">My Videos</h1>
       <div class="faq headline-sm" :class="{ 'force-opacity': showLabels }">
@@ -56,23 +57,26 @@ import SiteFooter from '@/components/web/SiteFooter';
 import DVRItem from '@/components/web/DVRItem';
 
 export default {
-  name: 'my-videos',
+  name: 'web-myvideos',
+
+  props: ['platform'],
 
   components: {
     SiteHeader,
     SiteFooter,
     DVRItem
   },
-  
-  mounted () {
-    this.$parent.initFonts()
-  },
 
   computed: {
     showLabels () {
       return this.$store.state.showLabels
     }
-  }
+  },
+  
+  mounted () {
+    this.$store.commit('setPlatform', this.platform)
+    this.$parent.initFonts()
+  },
 }
 </script>
 

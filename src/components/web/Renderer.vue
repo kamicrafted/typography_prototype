@@ -10,7 +10,7 @@
 
     <div class="meta">
       <div class="primary">
-        <div class="airing body-xs">
+        <div class="airing">
           <span class="date body-xs" :class="{ 'force-opacity': showLabels }">Tonight</span>
           <span class="time body-xs" :class="{ 'force-opacity': showLabels }">8:30PM</span>
         </div>

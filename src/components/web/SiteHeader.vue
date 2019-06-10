@@ -20,7 +20,10 @@
       </div>
 
       <div class="help">
-        <p class="headline-xs" :class="{ 'force-opacity': showLabels }">Help</p>
+        <router-link :to="{ name: 'index'}">
+          <p class="headline-xs" :class="{ 'force-opacity': showLabels }">Help</p>
+        </router-link>
+        
       </div>
     </div>
   </header>
@@ -114,6 +117,12 @@ nav {
     height: 100%;
     align-items: center;
     padding: 0 15px;
+  }
+}
+
+.help {
+  a {
+    color: white;
   }
 }
 </style>

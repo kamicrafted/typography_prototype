@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="web shows">
     <SiteHeader />
 
     <Hero title="The Name of The Rose" subhead="Series Premiere" />
@@ -36,7 +36,9 @@ import CarouselFeatured from '@/components/web/CarouselFeatured';
 import Grid from '@/components/web/Grid';
 
 export default {
-  name: 'web',
+  name: 'web-shows',
+
+  props: ['platform'],
 
   components: {
     SiteHeader,
@@ -47,15 +49,17 @@ export default {
     Grid
   },
 
-  mounted () {
-    this.$parent.initFonts()
-  },
 
   computed: {
     showLabels () {
       return this.$store.state.showLabels
-    }
-  }
+    },
+  },
+
+  mounted () {
+    this.$store.commit('setPlatform', this.platform)
+    this.$parent.initFonts()
+  },
 }
 </script>
 

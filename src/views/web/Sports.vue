@@ -1,6 +1,7 @@
 <template>
-  <div class="home">
+  <div class="web sports">
     <SiteHeader />
+    
     <div class="subnav">
       <router-link class="headline-xs" :class="{ 'force-opacity': showLabels }" to="/">ALL</router-link>
       <router-link class="headline-xs" :class="{ 'force-opacity': showLabels }" to="/">SOCCER</router-link>
@@ -41,7 +42,10 @@ import Hero from '@/components/web/Hero';
 import SportsTable from '@/components/web/SportsTable';
 
 export default {
-  name: 'web',
+  name: 'web-sports',
+
+  props: ['platform'],
+
   components: {
     SiteHeader,
     SiteFooter,
@@ -60,6 +64,7 @@ export default {
   },
 
   mounted () {
+    this.$store.commit('setPlatform', this.platform)
     this.$parent.initFonts()
   }
 }

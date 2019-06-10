@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="web home">
     <SiteHeader />
 
     <div class="content">
@@ -30,7 +30,10 @@ import CarouselMovie from '@/components/web/CarouselMovie';
 import CarouselLeague from '@/components/web/CarouselLeague';
 
 export default {
-  name: 'web',
+  name: 'web-home',
+
+  props: ['platform'],
+
   components: {
     SiteHeader,
     SiteFooter,
@@ -40,9 +43,12 @@ export default {
     CarouselMovie,
     CarouselLeague
   },
+
   mounted () {
+    this.$store.commit('setPlatform', this.platform)
     this.$parent.initFonts()
-  }
+  },
+
 }
 </script>
 
