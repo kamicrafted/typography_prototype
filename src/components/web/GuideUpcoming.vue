@@ -21,7 +21,13 @@
 
 <script>
 export default {
-  
+  name: 'guide-upcoming',
+
+  computed: {
+    showLabels () {
+      return this.$store.state.showLabels
+    }
+  },
 }
 </script>
 
