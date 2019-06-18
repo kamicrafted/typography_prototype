@@ -2,20 +2,7 @@
   <div class="web sports">
     <SiteHeader />
     
-    <div class="subnav">
-      <router-link class="headline-xs" :class="{ 'force-opacity': showLabels }" to="/">ALL</router-link>
-      <router-link class="headline-xs" :class="{ 'force-opacity': showLabels }" to="/">SOCCER</router-link>
-      <router-link class="headline-xs" :class="{ 'force-opacity': showLabels }" to="/">BASKETBALL</router-link>
-      <router-link class="headline-xs" :class="{ 'force-opacity': showLabels }" to="/">HOCKEY</router-link>
-      <router-link class="headline-xs" :class="{ 'force-opacity': showLabels }" to="/">BASEBALL</router-link>
-      <router-link class="headline-xs" :class="{ 'force-opacity': showLabels }" to="/">FOOTBALL</router-link>
-      <router-link class="headline-xs" :class="{ 'force-opacity': showLabels }" to="/">TENNIS</router-link>
-      <router-link class="headline-xs" :class="{ 'force-opacity': showLabels }" to="/">RACING</router-link>
-      <router-link class="headline-xs" :class="{ 'force-opacity': showLabels }" to="/">CYCLING</router-link>
-      <router-link class="headline-xs" :class="{ 'force-opacity': showLabels }" to="/">GOLF</router-link>
-      <router-link class="headline-xs" :class="{ 'force-opacity': showLabels }" to="/">MMA</router-link>
-      <router-link class="headline-xs" :class="{ 'force-opacity': showLabels }" to="/">OTHER</router-link>
-    </div>
+    <SubNav :subnav="subnav" />
 
     <Hero title="See Upcoming Matches in 4K" subhead="4K presented by the all-new Lexus RC F" />
 
@@ -38,6 +25,7 @@
 <script>
 import SiteHeader from '@/components/web/SiteHeader';
 import SiteFooter from '@/components/web/SiteFooter';
+import SubNav from '@/components/web/SubNav';
 import Hero from '@/components/web/Hero';
 import SportsTable from '@/components/web/SportsTable';
 
@@ -46,11 +34,18 @@ export default {
 
   props: ['platform'],
 
+  data: function () {
+    return {
+      subnav: ['All', 'Soccer', 'Basketball', 'Hockey', 'Baseball', 'Football', 'Tennis', 'Racing', 'Cycling', 'Golf', 'MMA', 'Other']
+    }
+  },
+
   components: {
     SiteHeader,
     SiteFooter,
+    SubNav,
     Hero,
-    SportsTable
+    SportsTable,
   },
 
   methods: {
@@ -75,20 +70,6 @@ export default {
 
 .content {
   padding-top: 0;
-}
-
-.subnav {
-  margin-top: 60px;
-  padding: 10px 40px;
-  background-color: $grey-cool-20;
-
-  a {
-    display: inline-block;
-    color: $color-body;
-    text-decoration: none;
-    font-weight: 700;
-    margin-right: 20px;
-  }
 }
 
 .matches {

@@ -2,27 +2,27 @@
   <div class="menu">
     <router-link class="menu__item" :to="{name: 'mobile'}">
       <div class="icon"></div>
-      <div class="label headline-xxs">Home</div>
+      <div class="label headline-xxs" :class="{ 'force-opacity': showLabels }">Home</div>
     </router-link>
 
     <router-link class="menu__item" :to="{name: 'mobile-sports'}">
       <div class="icon"></div>
-      <div class="label headline-xxs">Sports</div>
+      <div class="label headline-xxs" :class="{ 'force-opacity': showLabels }">Sports</div>
     </router-link>
 
-    <router-link class="menu__item" :to="{name: 'mobile-entertainment'}">
+    <router-link class="menu__item" :to="{name: 'mobile-shows'}">
       <div class="icon"></div>
-      <div class="label headline-xxs">Entertainment</div>
+      <div class="label headline-xxs" :class="{ 'force-opacity': showLabels }">Entertainment</div>
     </router-link>
 
-    <router-link class="menu__item" :to="{name: 'mobile-sports'}">
+    <router-link class="menu__item" :to="{name: 'mobile-guide'}">
       <div class="icon"></div>
-      <div class="label headline-xxs">Guide</div>
+      <div class="label headline-xxs" :class="{ 'force-opacity': showLabels }">Guide</div>
     </router-link>
 
-    <router-link class="menu__item" :to="{name: 'mobile-sports'}">
+    <router-link class="menu__item" :to="{name: 'mobile-recorded'}">
       <div class="icon"></div>
-      <div class="label headline-xxs">My Fubo</div>
+      <div class="label headline-xxs" :class="{ 'force-opacity': showLabels }">My Fubo</div>
     </router-link>
   </div>
 </template>
@@ -31,11 +31,18 @@
 export default {
   name: 'site-footer',
 
+  props: ['platform'],
+
   computed: {
     showLabels () {
       return this.$store.state.showLabels
     }
-  }
+  },
+
+  mounted () {
+    this.$store.commit('setPlatform', this.platform)
+    this.$parent.initFonts()
+  },
 }
 </script>
 
@@ -47,13 +54,14 @@ export default {
   align-items: flex-start;
   justify-content: center;
   position: fixed;
-  z-index: 100;
+  z-index: 500;
   width: $mobile-width;
   height: 95px;
   top: calc(100% - 95px);
-  left: 0;
+  left: 50%;
   padding-top: 10px;
   background-color: $grey-cool-0;
+  transform: translateX(-50%);
 
   &__item {
     display: flex;

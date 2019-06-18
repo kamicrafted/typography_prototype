@@ -27,13 +27,55 @@ body {
   overflow-x: hidden;
 }
 
+input[type="text"] {
+  width: 100%;
+  background-color: $grey-cool-40;
+  border: 1px solid black;
+  padding: 12px 15px;
+  color: white;
+  border-radius: 2px;
+
+  &:disabled {
+    opacity: .7;
+  }
+}
+
+.flex-group {
+  display: flex;
+}
+
+.field-label {
+  margin-bottom: 10px;
+}
+
+.field-group {
+  margin-bottom: 20px;
+
+  .group-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .button {
+    align-self: flex-end;
+    background-color: $orange-100;
+    padding: 6px 20px;
+    margin-left: auto;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+}
+
 .trace {
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   top: 0;
   left: 0;
   width: 375px;
   opacity: .25;
+  display: none;
 }
 
 .web {
@@ -92,8 +134,14 @@ body {
 
 #app {
   .mobile {
+    position: relative;
     background-color: $color-bg;
     padding-bottom: 100px;
+    margin: 0 auto;
+  }
+
+  .web {
+    background-color: $color-bg;
   }
 }
 
@@ -107,6 +155,10 @@ body {
   }
 }
 
+.table-guide {
+  width: 100%;
+}
+
 .headline-xs,
 .headline-sm,
 .headline-md,
@@ -118,6 +170,7 @@ body {
   }
 }
 
+.body-xxs,
 .body-xs,
 .body-sm,
 .body-md,
@@ -129,12 +182,14 @@ body {
   }
 }
 
+.headline-xxs,
 .headline-xs,
 .headline-sm,
 .headline-md,
 .headline-lg,
 .headline-xl,
 .headline-xxl,
+.body-xxs,
 .body-xs,
 .body-sm,
 .body-md,
@@ -144,10 +199,10 @@ body {
   position: relative;
 
   &:before {
+    content: '';
     position: absolute;
     z-index: 100;
     color: white;
-    border: 2px solid rgba(white, .1);
     padding: 2px 5px;
     font-size: 10px;
     font-weight: 700;
@@ -158,7 +213,7 @@ body {
     pointer-events: none;
     top: -15px;
     border-radius: 4px;
-    min-width: 40px;
+    min-width: 50px;
     text-align: center;
     transition: all .15s ease-out;
   }
@@ -166,6 +221,10 @@ body {
   &:hover:before {
     opacity: 1;
     top: 15px;
+  }
+
+  &:hover:after {
+    opacity: 1;
   }
 
   &.force-opacity:before {
@@ -206,6 +265,12 @@ body {
 .headline-xxl {
   &:before {
     content: "h-xxl";
+  }
+}
+
+.body-xxs {
+  &:before {
+    content: "b-xxs";
   }
 }
 

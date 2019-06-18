@@ -2,7 +2,7 @@
   <div class="mobile home">
     <img class="trace" src="@/assets/mobile/home1.png" alt="">
 
-    <SiteHeader page-title="HOME" />
+    <NavigationBar page-title="Home" />
 
     <div class="content">
       <Carousel section-title="Live TV" :showNetworkBar="true" />
@@ -17,8 +17,7 @@
 </template>
 
 <script>
-import SiteHeader from '@/components/mobile/SiteHeader';
-import TabMenu from '@/components/mobile/TabMenu';
+import NavigationBar from '@/components/mobile/NavigationBar';
 import Carousel from '@/components/mobile/Carousel';
 import CarouselMovie from '@/components/mobile/CarouselMovie';
 import CarouselFeatured from '@/components/mobile/CarouselFeatured';
@@ -30,8 +29,7 @@ export default {
   props: ['platform'],
 
   components: {
-    SiteHeader,
-    TabMenu,
+    NavigationBar,
     Carousel,
     CarouselMovie,
     CarouselFeatured,

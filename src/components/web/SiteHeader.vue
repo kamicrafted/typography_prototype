@@ -16,7 +16,9 @@
     <div class="header__right">
       <div class="search body-sm" :class="{ 'force-opacity': showLabels }"></div>
       <div class="account">
-        <p class="headline-xs" :class="{ 'force-opacity': showLabels }">Hi, David</p>
+        <router-link :to="{ name: 'web-account'}">
+          <p class="headline-xs" :class="{ 'force-opacity': showLabels }">Hi, David</p>
+        </router-link>
       </div>
 
       <div class="help">
@@ -120,7 +122,8 @@ nav {
   }
 }
 
-.help {
+.help,
+.account {
   a {
     color: white;
   }

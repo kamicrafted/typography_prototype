@@ -2,7 +2,7 @@
   <div class="mobile sports">
     <img class="trace" src="@/assets/mobile/home1.png" alt="">
 
-    <SiteHeader page-title="SPORTS" />
+    <NavigationBar page-title="Sports" />
 
     <div class="content">
       <!-- <Carousel section-title="Featured" :showNetworkBar="true" /> -->
@@ -11,18 +11,14 @@
       <Carousel section-title="Recently Aired" />
       <Carousel section-title="Sports Talk" :hideMeta="true" />
 
-      <FilterList />
+      <FilterList :filterTitle="filterTitle" />
     </div>
   </div>
 </template>
 
 <script>
-import SiteHeader from '@/components/mobile/SiteHeader';
-import TabMenu from '@/components/mobile/TabMenu';
+import NavigationBar from '@/components/mobile/NavigationBar';
 import Carousel from '@/components/mobile/Carousel';
-import CarouselMovie from '@/components/mobile/CarouselMovie';
-import CarouselFeatured from '@/components/mobile/CarouselFeatured';
-import CarouselLeague from '@/components/mobile/CarouselLeague';
 import FilterList from '@/components/mobile/FilterList'
 
 export default {
@@ -30,13 +26,15 @@ export default {
 
   props: ['platform'],
 
+  data: function () {
+    return {
+      filterTitle: 'Sports'
+    }
+  },
+
   components: {
-    SiteHeader,
-    TabMenu,
+    NavigationBar,
     Carousel,
-    CarouselMovie,
-    CarouselFeatured,
-    CarouselLeague,
     FilterList
   },
 

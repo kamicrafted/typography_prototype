@@ -4,7 +4,7 @@
 
     <NavigationBar page-title="My Fubo" />
 
-    <SplitViewController :options="options.label" :selection="0"  />
+    <SplitViewController :options="options.label" :selection="1"  />
 
     <div class="capacity">
       <span class="recorded-hours headline-lg" :class="{ 'force-opacity': showLabels }">
@@ -45,44 +45,20 @@ export default {
 
       recordings: [
         {
-          title: 'PAW Patrol',
-          episodeCount: 76,
-          meta: '',
-          duration: ''
-        },
-        {
-          title: 'Lucy',
-          episodeCount: 0,
-          meta: '2018 | R',
-          duration: '2h'
-        },
-        {
-          title: 'How I Met Your Mother',
-          episodeCount: 0,
-          meta: 'S3 EP14 • The Bracket',
-          duration: ''
-        },
-        {
-          title: 'CD Tiburones Rojos de Veracruz vs Lobos de...',
-          episodeCount: 0,
-          meta: 'Liga MX',
-          duration: '2h'
-        },
-        {
           title: 'Huang\'s World',
-          episodeCount: 5,
+          episodeCount: 2,
           meta: '',
           duration: '3h 40min'
         },
         {
-          title: 'EGC - Bridgestone Invitational, Third Rou...',
-          episodeCount: 0,
-          meta: 'PGA Tour',
-          duration: '1h 45min'
-        },
+          title: 'How I Met Your Mother',
+          episodeCount: 4,
+          meta: 'S3 EP14 • The Bracket',
+          duration: ''
+        },    
         {
           title: '44 Cats',
-          episodeCount: 2,
+          episodeCount: 1,
           meta: '',
           duration: ''
         }

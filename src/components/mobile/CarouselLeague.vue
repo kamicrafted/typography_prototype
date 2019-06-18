@@ -1,7 +1,7 @@
 <template>
   <div class="caoursel">
     <div class="section-header">
-      <h2 class="headline-md" :class="{ 'force-opacity': showLabels }">{{ sectionTitle }}</h2>
+      <h2 class="headline-sm" :class="{ 'force-opacity': showLabels }">{{ sectionTitle }}</h2>
       <SeeMore />
     </div>
 
@@ -55,7 +55,7 @@ export default {
 @import '../../styles/app';
 
 .caoursel {
-  padding: 25px $mobile-gutter 30px $mobile-gutter;
+  padding: 15px $mobile-gutter 15px $mobile-gutter;
 }
 
 .section-header {
@@ -71,7 +71,6 @@ h2 {
 
 .row {
   display: flex;
-  margin-top: 10px;
 }
 
 </style>

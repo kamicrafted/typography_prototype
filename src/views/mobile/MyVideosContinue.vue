@@ -4,7 +4,7 @@
 
     <NavigationBar page-title="My Fubo" />
 
-    <SplitViewController :options="options.label" :selection="0"  />
+    <SplitViewController :options="options.label" :selection="2"  />
 
     <div class="capacity">
       <span class="recorded-hours headline-lg" :class="{ 'force-opacity': showLabels }">
@@ -18,7 +18,10 @@
     </div>
 
     <div class="dvr-list">
-      <DVRItem :recordings="recordings" :index="index" v-for="(n, index) of 10" :key="n" />
+      <div class="message">
+        <h1 class="headline-xxl" :class="{ 'force-opacity': showLabels }">You don't have anything in the Continue Watching List.</h1>
+        <span class="button headline-lg" :class="{ 'force-opacity': showLabels }">Browse Content</span>
+      </div>
     </div>
   </div>
 </template>
@@ -45,44 +48,20 @@ export default {
 
       recordings: [
         {
-          title: 'PAW Patrol',
-          episodeCount: 76,
-          meta: '',
-          duration: ''
-        },
-        {
-          title: 'Lucy',
-          episodeCount: 0,
-          meta: '2018 | R',
-          duration: '2h'
-        },
-        {
-          title: 'How I Met Your Mother',
-          episodeCount: 0,
-          meta: 'S3 EP14 • The Bracket',
-          duration: ''
-        },
-        {
-          title: 'CD Tiburones Rojos de Veracruz vs Lobos de...',
-          episodeCount: 0,
-          meta: 'Liga MX',
-          duration: '2h'
-        },
-        {
           title: 'Huang\'s World',
-          episodeCount: 5,
+          episodeCount: 2,
           meta: '',
           duration: '3h 40min'
         },
         {
-          title: 'EGC - Bridgestone Invitational, Third Rou...',
-          episodeCount: 0,
-          meta: 'PGA Tour',
-          duration: '1h 45min'
-        },
+          title: 'How I Met Your Mother',
+          episodeCount: 4,
+          meta: 'S3 EP14 • The Bracket',
+          duration: ''
+        },    
         {
           title: '44 Cats',
-          episodeCount: 2,
+          episodeCount: 1,
           meta: '',
           duration: ''
         }
@@ -157,16 +136,22 @@ html, body {
 }
 
 .dvr-list {
-  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 400px;
+  padding: 0 $mobile-gutter;
 
-  .item {
-    &:nth-child(odd) {
-      background-color: rgba($grey-cool-40, .5);
-    }
+  h1 {
+    margin-bottom: 50px;
+  }
 
-    &:nth-child(even) {
-      background-color: rgba($grey-cool-40, .3);
-    }
+  .button {
+    background-color: $grey-cool-40;
+    padding: 12px 30px;
+    border-radius: 2px;
+    font-weight: 700;
   }
 }
 

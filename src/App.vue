@@ -2,7 +2,7 @@
   <div id="app">
     <ConfigPanel />
 
-    <TabMenu v-if="currentPlatform == 'mobile'" />
+    <TabMenu v-if="currentPlatform == 'mobile'" :platform="currentPlatform" />
     <router-view :key="$route.fullPath" :platform="currentPlatform" />
   </div>
 </template>

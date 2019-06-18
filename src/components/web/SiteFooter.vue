@@ -7,18 +7,18 @@
 
       <div class="links">
         <div class="links__company">
-          <h4 class="headline-sm">Company</h4>
-          <a class="body-md" :class="{ 'force-opacity': showLabels }" href="">Advertise</a>
-          <a class="body-md" :class="{ 'force-opacity': showLabels }" href="">Careers</a>
-          <a class="body-md" :class="{ 'force-opacity': showLabels }" href="">Become an Affiliate</a>
-          <a class="body-md" :class="{ 'force-opacity': showLabels }" href="">Press Inquiries</a>
+          <h4 class="headline-sm" :class="{ 'force-opacity': showLabels }">Company</h4>
+          <a class="body-sm" :class="{ 'force-opacity': showLabels }" href="">Advertise</a>
+          <a class="body-sm" :class="{ 'force-opacity': showLabels }" href="">Careers</a>
+          <a class="body-sm" :class="{ 'force-opacity': showLabels }" href="">Become an Affiliate</a>
+          <a class="body-sm" :class="{ 'force-opacity': showLabels }" href="">Press Inquiries</a>
         </div>
 
         <div class="links__support">
-          <h4 class="headline-sm">Support</h4>
-          <a class="body-md" :class="{ 'force-opacity': showLabels }" href="">Help Center</a>
-          <a class="body-md" :class="{ 'force-opacity': showLabels }" href="">Link</a>
-          <a class="body-md" :class="{ 'force-opacity': showLabels }" href="">Link</a>
+          <h4 class="headline-sm" :class="{ 'force-opacity': showLabels }">Support</h4>
+          <a class="body-sm" :class="{ 'force-opacity': showLabels }" href="">Help Center</a>
+          <a class="body-sm" :class="{ 'force-opacity': showLabels }" href="">Link</a>
+          <a class="body-sm" :class="{ 'force-opacity': showLabels }" href="">Link</a>
         </div>
       </div>
 

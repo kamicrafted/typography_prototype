@@ -42,6 +42,10 @@ export default new Vuex.Store({
 
       body: [
         {
+          name: 'XXS',
+          px: 10
+        },
+        {
           name: 'XS',
           px: 12
         },
@@ -80,6 +84,33 @@ export default new Vuex.Store({
         },
         {
           name: 'MD',
+          px: 16
+        },
+        {
+          name: 'LG',
+          px: 18
+        },
+        {
+          name: 'XL',
+          px: 18
+        },
+        {
+          name: 'XXL',
+          px: 24
+        }
+      ],
+
+      body: [
+        {
+          name: 'XS',
+          px: 10
+        },
+        {
+          name: 'SM',
+          px: 12
+        },
+        {
+          name: 'MD',
           px: 14
         },
         {
@@ -88,35 +119,8 @@ export default new Vuex.Store({
         },
         {
           name: 'XL',
-          px: 18
-        },
-        {
-          name: 'XXL',
-          px: 12
+          px: 20
         }
-      ],
-
-      body: [
-        {
-          name: 'XS',
-          px: 12
-        },
-        {
-          name: 'SM',
-          px: 12
-        },
-        {
-          name: 'MD',
-          px: 12
-        },
-        {
-          name: 'LG',
-          px: 12
-        },
-        {
-          name: 'XL',
-          px: 12
-        },
       ]
     },
   },

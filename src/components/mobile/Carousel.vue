@@ -1,7 +1,7 @@
 <template>
   <div class="carousel">
     <div class="section-header">
-      <h2 class="headline-md" :class="{ 'force-opacity': showLabels }">{{ sectionTitle }}</h2>
+      <h2 class="headline-sm" :class="{ 'force-opacity': showLabels }">{{ sectionTitle }}</h2>
       <SeeMore />
     </div>
 
@@ -57,7 +57,7 @@ export default {
 @import '../../styles/app';
 
 .carousel {
-  padding: 16px $mobile-gutter 30px;
+  padding: 15px $mobile-gutter 10px;
   // border-bottom: 1px solid rgba(white, .1);
 
   &:first-child {

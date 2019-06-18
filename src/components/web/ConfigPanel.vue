@@ -176,14 +176,6 @@ export default {
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
-
-    &__left {
-
-    }
-
-    &__right {
-      
-    }
   }
 }
 
