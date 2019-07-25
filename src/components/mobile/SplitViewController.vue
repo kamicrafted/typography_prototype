@@ -1,7 +1,7 @@
 <template>
   <div class="spliview-controller">
     <div class="options">
-      <router-link v-for="(option, index) in options" :key="option" class="option headline-lg" :class="{ active: selection === index, 'force-opacity': showLabels}" :to="{ name: 'mobile-' + option.toLowerCase() }">{{ option }}</router-link>
+      <router-link v-for="(option, index) in options" :key="option" class="option headline-md" :class="{ active: selection === index, 'force-opacity': showLabels}" :to="{ name: 'mobile-' + option.toLowerCase() }">{{ option }}</router-link>
     </div>
   </div>
 </template>

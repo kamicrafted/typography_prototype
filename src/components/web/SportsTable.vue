@@ -2,15 +2,15 @@
   <div class="table">
     <div class="table__head">
       <div class="dates">
-        <div class="prev headline-sm" :class="{ 'force-opacity': showLabels }">
+        <div class="prev headline-md" :class="{ 'force-opacity': showLabels }">
           Thu, May 23
         </div>
 
-        <div class="current headline-sm" :class="{ 'force-opacity': showLabels }">
+        <div class="current headline-md" :class="{ 'force-opacity': showLabels }">
           Today, May 24
         </div>
 
-        <div class="next headline-sm" :class="{ 'force-opacity': showLabels }">
+        <div class="next headline-md" :class="{ 'force-opacity': showLabels }">
           Sat, May 25
         </div>
       </div>
@@ -87,7 +87,7 @@ export default {
       .prev,
       .next {
         flex: 0 1 auto;
-        width: 100px;
+        width: 150px;
         text-align: center;
       }
 

@@ -5,14 +5,14 @@
 
     <div class="content">
       <div class="utility">
-        <div class="input body-xs" :class="{ 'force-opacity': showLabels }">
-          <input class="body-xs" type="text" value="Find your favorite channel or network">
+        <div class="input body-sm" :class="{ 'force-opacity': showLabels }">
+          <input class="body-sm" type="text" value="Find your favorite channel or network">
         </div>
 
         <div class="jump-nav">
-          <span class="jump-label body-xs">Jump to</span>
-          <span class="jump-button body-xs">Up Next</span>
-          <span class="jump-label body-xs">Tomorrow Night</span>
+          <span class="jump-label body-sm" :class="{ 'force-opacity': showLabels }">Jump to</span>
+          <span class="jump-button body-sm" :class="{ 'force-opacity': showLabels }">Up Next</span>
+          <span class="jump-label body-sm" :class="{ 'force-opacity': showLabels }">Tomorrow Night</span>
         </div>
       </div>
 

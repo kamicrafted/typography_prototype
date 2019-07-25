@@ -1,24 +1,24 @@
 <template>
   <div class="site-footer">
     <footer class="footer">
-      <p class="site-description body-sm" :class="{ 'force-opacity': showLabels }">
+      <p class="site-description body-md" :class="{ 'force-opacity': showLabels }">
         fuboTV is the world’s only sports-focused live TV streaming service with top leagues and teams, plus popular shows, movies and news for the entire household. Watch 100+ live TV channels, thousands of on-demand titles and more on your TV, phone, tablet, computer and other devices.
       </p>
 
       <div class="links">
         <div class="links__company">
-          <h4 class="headline-sm" :class="{ 'force-opacity': showLabels }">Company</h4>
-          <a class="body-sm" :class="{ 'force-opacity': showLabels }" href="">Advertise</a>
-          <a class="body-sm" :class="{ 'force-opacity': showLabels }" href="">Careers</a>
-          <a class="body-sm" :class="{ 'force-opacity': showLabels }" href="">Become an Affiliate</a>
-          <a class="body-sm" :class="{ 'force-opacity': showLabels }" href="">Press Inquiries</a>
+          <h4 class="headline-md" :class="{ 'force-opacity': showLabels }">Company</h4>
+          <a class="headline-xs" :class="{ 'force-opacity': showLabels }" href="">Advertise</a>
+          <a class="headline-xs" :class="{ 'force-opacity': showLabels }" href="">Careers</a>
+          <a class="headline-xs" :class="{ 'force-opacity': showLabels }" href="">Become an Affiliate</a>
+          <a class="headline-xs" :class="{ 'force-opacity': showLabels }" href="">Press Inquiries</a>
         </div>
 
         <div class="links__support">
-          <h4 class="headline-sm" :class="{ 'force-opacity': showLabels }">Support</h4>
-          <a class="body-sm" :class="{ 'force-opacity': showLabels }" href="">Help Center</a>
-          <a class="body-sm" :class="{ 'force-opacity': showLabels }" href="">Link</a>
-          <a class="body-sm" :class="{ 'force-opacity': showLabels }" href="">Link</a>
+          <h4 class="headline-md" :class="{ 'force-opacity': showLabels }">Support</h4>
+          <a class="headline-xs" :class="{ 'force-opacity': showLabels }" href="">Help Center</a>
+          <a class="headline-xs" :class="{ 'force-opacity': showLabels }" href="">Link</a>
+          <a class="headline-xs" :class="{ 'force-opacity': showLabels }" href="">Link</a>
         </div>
       </div>
 
@@ -73,6 +73,7 @@ export default {
       color: white;
       text-decoration: none;
       margin-bottom: 5px;
+      font-weight: bold;
     }
 
     h4 {

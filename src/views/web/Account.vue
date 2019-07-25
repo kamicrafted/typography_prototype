@@ -31,7 +31,7 @@
             </div>
 
             <div class="right">
-              <span class="body-xs" :class="{ 'force-opacity': showLabels }">View subscription details</span>
+              <span class="body-sm" :class="{ 'force-opacity': showLabels }">View subscription details</span>
             </div>
           </div>
         </div>
@@ -49,7 +49,7 @@
           <div class="field-group">
             <div class="group-head">
               <h3 class="field-label headline-sm" :class="{ 'force-opacity': showLabels }">Password</h3>
-              <div class="body-xs" :class="{ 'force-opacity': showLabels }">Change password</div>
+              <div class="body-sm" :class="{ 'force-opacity': showLabels }">Change password</div>
             </div>
             <div class="input body-md" :class="{ 'force-opacity': showLabels }">
               <input class="body-md" type="text" value="********" disabled>
@@ -78,7 +78,7 @@
             </div>
 
             <div class="right">
-              <span class="body-xs" :class="{ 'force-opacity': showLabels }">Disconnect</span>
+              <span class="body-sm" :class="{ 'force-opacity': showLabels }">Disconnect</span>
             </div>
           </div>
 
@@ -89,7 +89,7 @@
             </div>
 
             <div class="right">
-              <span class="body-xs" :class="{ 'force-opacity': showLabels }">Connect</span>
+              <span class="body-sm" :class="{ 'force-opacity': showLabels }">Connect</span>
             </div>
           </div>
         </div>

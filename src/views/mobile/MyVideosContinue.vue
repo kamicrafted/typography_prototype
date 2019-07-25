@@ -19,8 +19,11 @@
 
     <div class="dvr-list">
       <div class="message">
-        <h1 class="headline-xxl" :class="{ 'force-opacity': showLabels }">You don't have anything in the Continue Watching List.</h1>
-        <span class="button headline-lg" :class="{ 'force-opacity': showLabels }">Browse Content</span>
+        <h1 class="headline-xl" :class="{ 'force-opacity': showLabels }">There's nothing for you to continue watching.</h1>
+        <p class="body-lg" :class="{ 'force-opacity': showLabels }">
+          Once you start watching, we'll keep track of unfinished programs here. 
+        </p>
+        <span class="button headline-md" :class="{ 'force-opacity': showLabels }">Explore what's on</span>
       </div>
     </div>
   </div>
@@ -144,12 +147,15 @@ html, body {
   padding: 0 $mobile-gutter;
 
   h1 {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    line-height: 1.2;
   }
 
   .button {
-    background-color: $grey-cool-40;
+    margin-top: 30px;
     padding: 12px 30px;
+    background-color: $grey-cool-40;
     border-radius: 2px;
     font-weight: 700;
   }

@@ -20,6 +20,16 @@ import MobileMyVideosScheduled from './views/mobile/MyVideosScheduled.vue'
 import MobileMyVideosContinue from './views/mobile/MyVideosContinue.vue'
 import MobileAccount from './views/mobile/Account.vue'
 
+import TV from './views/tv/Home.vue'
+import TVSports from './views/tv/Sports.vue'
+// import TVMovies from './views/tv/Movies.vue'
+// import TVShows from './views/tv/Shows.vue'
+// import TVGuide from './views/tv/Guide.vue'
+// import TVMyVideos from './views/tv/MyVideos.vue'
+// import TVAccount from './views/tv/Account.vue'
+
+import Preview from './views/Preview.vue'
+
 Vue.use(Router)
 
 export default new Router({
@@ -28,6 +38,12 @@ export default new Router({
       path: '/',
       name: 'index',
       component: Index
+    },
+
+    {
+      path: '/preview',
+      name: 'preview',
+      component: Preview
     },
 
     // ==========================================
@@ -139,6 +155,52 @@ export default new Router({
       name: 'mobile-account',
       component: MobileAccount,
       props: { platform: 'mobile' }
-    }
+    },
+
+    // ==========================================
+    // TV Routes
+    // ==========================================
+    {
+      path: '/tv/',
+      name: 'tv',
+      component: TV,
+      props: { platform: 'tv' }
+    },
+    {
+      path: '/tv/sports',
+      name: 'tv-sports',
+      component: TVSports,
+      props: { platform: 'tv' }
+    },
+    // {
+    //   path: '/tv/shows',
+    //   name: 'tv-shows',
+    //   component: TVShows,
+    //   props: { platform: 'tv' }
+    // },
+    // {
+    //   path: '/tv/movies',
+    //   name: 'tv-movies',
+    //   component: TVMovies,
+    //   props: { platform: 'tv' }
+    // },
+    // {
+    //   path: '/tv/guide',
+    //   name: 'tv-guide',
+    //   component: TVGuide,
+    //   props: { platform: 'tv' }
+    // },
+    // {
+    //   path: '/tv/myvideos',
+    //   name: 'tv-myvideos',
+    //   component: TVMyVideos,
+    //   props: { platform: 'tv' }
+    // },
+    // {
+    //   path: '/tv/account',
+    //   name: 'tv-account',
+    //   component: TVAccount,
+    //   props: { platform: 'tv' }
+    // },
   ]
 })

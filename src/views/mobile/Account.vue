@@ -5,76 +5,76 @@
     <NavigationBar page-title="Account" />
 
     <div class="content">
-      <div class="form-section headline-sm" :class="{ 'force-opacity': showLabels }">Profile</div>
+      <div class="form-section headline-md" :class="{ 'force-opacity': showLabels }">Profile</div>
 
       <div class="field-group">
-        <div class="group-left body-lg" :class="{ 'force-opacity': showLabels }">John Snow</div>
+        <div class="group-left body-md" :class="{ 'force-opacity': showLabels }">John Snow</div>
         <div class="group-right"><div class="icon"></div></div>
       </div>
 
       <div class="field-group">
-        <div class="group-left body-lg" :class="{ 'force-opacity': showLabels }">jsnow@fubo.tv</div>
+        <div class="group-left body-md" :class="{ 'force-opacity': showLabels }">jsnow@fubo.tv</div>
       </div>
 
       <div class="field-group">
-        <div class="group-left body-lg" :class="{ 'force-opacity': showLabels }">Password</div>
+        <div class="group-left body-md" :class="{ 'force-opacity': showLabels }">Password</div>
         <div class="group-right"><div class="icon"></div></div>
       </div>
 
-      <div class="form-section headline-sm" :class="{ 'force-opacity': showLabels }">Social</div>
+      <div class="form-section headline-md" :class="{ 'force-opacity': showLabels }">Social</div>
 
       <div class="field-group">
-        <div class="group-left body-lg" :class="{ 'force-opacity': showLabels }">Facebook</div>
+        <div class="group-left body-md" :class="{ 'force-opacity': showLabels }">Facebook</div>
         <div class="group-right body-md" :class="{ 'force-opacity': showLabels }">Connect</div>
       </div>
 
       <div class="field-group">
-        <div class="group-left body-lg" :class="{ 'force-opacity': showLabels }">Google</div>
+        <div class="group-left body-md" :class="{ 'force-opacity': showLabels }">Google</div>
         <div class="group-right body-md" :class="{ 'force-opacity': showLabels }">Connect</div>
       </div>
 
-      <div class="form-section headline-sm" :class="{ 'force-opacity': showLabels }">About</div>
+      <div class="form-section headline-md" :class="{ 'force-opacity': showLabels }">About</div>
 
       <div class="field-group">
-        <div class="group-left body-lg" :class="{ 'force-opacity': showLabels }">Video View Tracking</div>
+        <div class="group-left body-md" :class="{ 'force-opacity': showLabels }">Video View Tracking</div>
         <div class="group-right"><div class="icon"></div></div>
       </div>
 
-      <div class="form-section headline-sm" :class="{ 'force-opacity': showLabels }">Legal</div>
+      <div class="form-section headline-md" :class="{ 'force-opacity': showLabels }">Legal</div>
 
       <div class="field-group">
-        <div class="group-left body-lg" :class="{ 'force-opacity': showLabels }">Terms of Service</div>
-        <div class="group-right"><div class="icon"></div></div>
-      </div>
-
-      <div class="field-group">
-        <div class="group-left body-lg" :class="{ 'force-opacity': showLabels }">Privacy Policy</div>
+        <div class="group-left body-md" :class="{ 'force-opacity': showLabels }">Terms of Service</div>
         <div class="group-right"><div class="icon"></div></div>
       </div>
 
       <div class="field-group">
-        <div class="group-left body-lg" :class="{ 'force-opacity': showLabels }">Cookie Policy</div>
-        <div class="group-right"><div class="icon"></div></div>
-      </div>
-
-      <div class="form-section headline-sm" :class="{ 'force-opacity': showLabels }">Support</div>
-
-      <div class="field-group">
-        <div class="group-left body-lg" :class="{ 'force-opacity': showLabels }">iTunes Auto-renewable Subscriptions</div>
+        <div class="group-left body-md" :class="{ 'force-opacity': showLabels }">Privacy Policy</div>
         <div class="group-right"><div class="icon"></div></div>
       </div>
 
       <div class="field-group">
-        <div class="group-left body-lg" :class="{ 'force-opacity': showLabels }">Help Center</div>
+        <div class="group-left body-md" :class="{ 'force-opacity': showLabels }">Cookie Policy</div>
+        <div class="group-right"><div class="icon"></div></div>
+      </div>
+
+      <div class="form-section headline-md" :class="{ 'force-opacity': showLabels }">Support</div>
+
+      <div class="field-group">
+        <div class="group-left body-md" :class="{ 'force-opacity': showLabels }">iTunes Auto-renewable Subscriptions</div>
+        <div class="group-right"><div class="icon"></div></div>
+      </div>
+
+      <div class="field-group">
+        <div class="group-left body-md" :class="{ 'force-opacity': showLabels }">Help Center</div>
         <div class="group-right"><div class="icon"></div></div>
       </div>
 
       <div class="field-group manage-account">
-        <p class="body-lg"><span class="strong">Account management:</span> To manage your account, please visit 'My Account' at fubo.tv/account.</p>
+        <p class="body-md"><span class="strong">Account management:</span> To manage your account, please visit 'My Account' at fubo.tv/account.</p>
       </div>
 
       <div class="footer">
-        <span class="button headline-lg" :class="{ 'force-opacity': showLabels }">Sign out</span>
+        <span class="button headline-md" :class="{ 'force-opacity': showLabels }">Sign out</span>
 
         <div class="version">
           <span class="body-md" :class="{ 'force-opacity': showLabels }">App v5.0.4.6526</span>

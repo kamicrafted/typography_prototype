@@ -16,8 +16,8 @@
 
         </div>
         <div class="info">
-          <h2 class="title headline-md" :class="{ 'force-opacity': showLabels }">See Upcoming Matches in 4K</h2>
-          <p class="subhead body-md" :class="{ 'force-opacity': showLabels }">
+          <h2 class="title headline-sm" :class="{ 'force-opacity': showLabels }">See Upcoming Matches in 4K</h2>
+          <p class="subhead body-sm" :class="{ 'force-opacity': showLabels }">
             4K presented by the all new Lex...
           </p>
         </div>

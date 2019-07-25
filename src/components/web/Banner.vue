@@ -12,7 +12,7 @@
         </div>
         <div class="message">
           <h3 class="headline headline-lg" :class="{ 'force-opacity': showLabels }">GET WATCHING</h3>
-          <p class="subhead body-md" :class="{ 'force-opacity': showLabels }">
+          <p class="subhead body-lg" :class="{ 'force-opacity': showLabels }">
             If you leave a program midway, we'll hold your place!
           </p>
         </div>

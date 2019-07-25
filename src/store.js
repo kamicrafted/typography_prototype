@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    sizeOptions: [8, 9, 10, 11, 12, 13, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50], // size options
+    sizeOptions: [8, 9, 10, 11, 12, 13, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80], // size options
 
     showLabels: false, // toggle style labels
 
@@ -92,7 +92,7 @@ export default new Vuex.Store({
         },
         {
           name: 'XL',
-          px: 18
+          px: 24
         },
         {
           name: 'XXL',
@@ -123,6 +123,67 @@ export default new Vuex.Store({
         }
       ]
     },
+
+    tvSizes: {
+      headline: [
+        {
+          name: 'XXS',
+          px: 12
+        },
+        {
+          name: 'XS',
+          px: 20
+        },
+        {
+          name: 'SM',
+          px: 24
+        },
+        {
+          name: 'MD',
+          px: 30
+        },
+        {
+          name: 'LG',
+          px: 36
+        },
+        {
+          name: 'XL',
+          px: 48
+        },
+        {
+          name: 'XXL',
+          px: 72
+        }
+      ],
+
+      body: [
+        {
+          name: 'XXS',
+          px: 12
+        },
+        {
+          name: 'XS',
+          px: 16
+        },
+        {
+          name: 'SM',
+          px: 18
+        },
+        {
+          name: 'MD',
+          px: 20
+        },
+        {
+          name: 'LG',
+          px: 24
+        },
+        {
+          name: 'XL',
+          px: 32
+        },
+      ]
+    },
+
   },
 
   mutations: {

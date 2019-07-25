@@ -72,7 +72,7 @@ export default {
       // ===============================================
       // BODY
       // ===============================================
-      console.log('::::: Setting up  for ' + this.currentPlatform)
+      console.log('::::: Setting up body for ' + this.currentPlatform)
       for (let i=0; i< this.$store.state[this.platformSizes].body.length; i++) {
         let selector = ('.body-' + this.$store.state[this.platformSizes].body[i].name).toLowerCase()
         // console.log(selector)
@@ -105,7 +105,7 @@ export default {
     },
   },
   mounted () {
-    this.initFonts();
+    // this.initFonts();
   }
 }
 </script>

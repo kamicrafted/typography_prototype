@@ -4,7 +4,7 @@
 
     <div class="filter-list">
       <div v-for="n in 10" :key="n" class="filter-list__item">
-        <h3 class="headline-lg" :class="{ 'force-opacity': showLabels }">Option</h3>
+        <h3 class="headline-sm" :class="{ 'force-opacity': showLabels }">Option</h3>
       </div>
     </div>
   </div>

@@ -2,9 +2,9 @@
   <table class="guide-table">
     <thead>
       <tr>
-        <td><span class="date headline-lg" :class="{ 'force-opacity': showLabels }">Wed, May</span><span class="day headline-lg" :class="{ 'force-opacity': showLabels }">22</span></td>
-        <td><span class="time headline-lg" :class="{ 'force-opacity': showLabels }">9:00</span> <span class="meridiem headline-xs" :class="{ 'force-opacity': showLabels }">AM</span></td>
-        <td><span class="time headline-lg" :class="{ 'force-opacity': showLabels }">9:30</span> <span class="meridiem headline-xs" :class="{ 'force-opacity': showLabels }">AM</span></td>
+        <td><span class="date headline-md" :class="{ 'force-opacity': showLabels }">Wed, May</span> <span class="day headline-md" :class="{ 'force-opacity': showLabels }">22</span></td>
+        <td><span class="time headline-md" :class="{ 'force-opacity': showLabels }">9:00</span> <span class="meridiem headline-xs" :class="{ 'force-opacity': showLabels }">AM</span></td>
+        <td><span class="time headline-md" :class="{ 'force-opacity': showLabels }">9:30</span> <span class="meridiem headline-xs" :class="{ 'force-opacity': showLabels }">AM</span></td>
       </tr>
     </thead>
     <tbody>
@@ -15,14 +15,14 @@
 
         <td class="program">
           <div class="info">
-            <h2 class="title headline-md" :class="{ 'force-opacity': showLabels }">Hot Bench</h2>
+            <h2 class="title headline-sm" :class="{ 'force-opacity': showLabels }">Hot Bench</h2>
             <p class="body-sm" :class="{ 'force-opacity': showLabels }">9:00-9:30AM</p>
           </div>
         </td>
 
         <td class="program">
           <div class="info">
-            <h2 class="title headline-md" :class="{ 'force-opacity': showLabels }">Hot Bench</h2>
+            <h2 class="title headline-sm" :class="{ 'force-opacity': showLabels }">Hot Bench</h2>
             <p class="body-sm" :class="{ 'force-opacity': showLabels }">9:00-9:30AM</p>
           </div>
         </td>
@@ -35,7 +35,7 @@
 
         <td colspan="2" class="program">
           <div class="info">
-            <h2 class="title headline-md" :class="{ 'force-opacity': showLabels }">Good Morning Vietnam</h2>
+            <h2 class="title headline-sm" :class="{ 'force-opacity': showLabels }">Good Morning Vietnam</h2>
             <p class="body-sm" :class="{ 'force-opacity': showLabels }">9:00-9:30AM</p>
           </div>
         </td>
@@ -48,7 +48,7 @@
 
         <td colspan="2" class="program">
           <div class="info">
-            <h2 class="title headline-md" :class="{ 'force-opacity': showLabels }">XY Chelsea</h2>
+            <h2 class="title headline-sm" :class="{ 'force-opacity': showLabels }">XY Chelsea</h2>
             <p class="body-sm" :class="{ 'force-opacity': showLabels }">9:00-9:30AM</p>
           </div>
         </td>
@@ -61,14 +61,14 @@
 
         <td class="program">
           <div class="info">
-            <h2 class="title headline-md" :class="{ 'force-opacity': showLabels }">Rapture</h2>
+            <h2 class="title headline-sm" :class="{ 'force-opacity': showLabels }">Rapture</h2>
             <p class="body-sm" :class="{ 'force-opacity': showLabels }">9:00-9:30AM</p>
           </div>
         </td>
 
         <td class="program">
           <div class="info">
-            <h2 class="title headline-md" :class="{ 'force-opacity': showLabels }">Goodbye Charlie</h2>
+            <h2 class="title headline-sm" :class="{ 'force-opacity': showLabels }">Goodbye Charlie</h2>
             <p class="body-sm" :class="{ 'force-opacity': showLabels }">9:00-9:30AM</p>
           </div>
         </td>
@@ -81,7 +81,7 @@
 
         <td colspan="2" class="program">
           <div class="info">
-            <h2 class="title headline-md" :class="{ 'force-opacity': showLabels }">The Three Stooges</h2>
+            <h2 class="title headline-sm" :class="{ 'force-opacity': showLabels }">The Three Stooges</h2>
             <p class="body-sm" :class="{ 'force-opacity': showLabels }">9:00-9:30AM</p>
           </div>
         </td>
@@ -94,14 +94,14 @@
 
         <td class="program">
           <div class="info">
-            <h2 class="title headline-md" :class="{ 'force-opacity': showLabels }">Hot Bench</h2>
+            <h2 class="title headline-sm" :class="{ 'force-opacity': showLabels }">Hot Bench</h2>
             <p class="body-sm" :class="{ 'force-opacity': showLabels }">9:00-9:30AM</p>
           </div>
         </td>
 
         <td class="program">
           <div class="info">
-            <h2 class="title headline-md" :class="{ 'force-opacity': showLabels }">Hot Bench</h2>
+            <h2 class="title headline-sm" :class="{ 'force-opacity': showLabels }">Hot Bench</h2>
             <p class="body-sm" :class="{ 'force-opacity': showLabels }">9:00-9:30AM</p>
           </div>
         </td>
@@ -114,7 +114,7 @@
 
         <td colspan="2" class="program">
           <div class="info">
-            <h2 class="title headline-md" :class="{ 'force-opacity': showLabels }">Good Morning Vietnam</h2>
+            <h2 class="title headline-sm" :class="{ 'force-opacity': showLabels }">Good Morning Vietnam</h2>
             <p class="body-sm" :class="{ 'force-opacity': showLabels }">9:00-9:30AM</p>
           </div>
         </td>
@@ -127,7 +127,7 @@
 
         <td colspan="2" class="program">
           <div class="info">
-            <h2 class="title headline-md" :class="{ 'force-opacity': showLabels }">XY Chelsea</h2>
+            <h2 class="title headline-sm" :class="{ 'force-opacity': showLabels }">XY Chelsea</h2>
             <p class="body-sm" :class="{ 'force-opacity': showLabels }">9:00-9:30AM</p>
           </div>
         </td>
@@ -140,14 +140,14 @@
 
         <td class="program">
           <div class="info">
-            <h2 class="title headline-md" :class="{ 'force-opacity': showLabels }">Rapture</h2>
+            <h2 class="title headline-sm" :class="{ 'force-opacity': showLabels }">Rapture</h2>
             <p class="body-sm" :class="{ 'force-opacity': showLabels }">9:00-9:30AM</p>
           </div>
         </td>
 
         <td class="program">
           <div class="info">
-            <h2 class="title headline-md" :class="{ 'force-opacity': showLabels }">Goodbye Charlie</h2>
+            <h2 class="title headline-sm" :class="{ 'force-opacity': showLabels }">Goodbye Charlie</h2>
             <p class="body-sm" :class="{ 'force-opacity': showLabels }">9:00-9:30AM</p>
           </div>
         </td>
@@ -160,7 +160,7 @@
 
         <td colspan="2" class="program">
           <div class="info">
-            <h2 class="title headline-md" :class="{ 'force-opacity': showLabels }">The Three Stooges</h2>
+            <h2 class="title headline-sm" :class="{ 'force-opacity': showLabels }">The Three Stooges</h2>
             <p class="body-sm" :class="{ 'force-opacity': showLabels }">9:00-9:30AM</p>
           </div>
         </td>

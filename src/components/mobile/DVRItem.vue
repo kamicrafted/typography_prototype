@@ -5,15 +5,15 @@
       <div class="program">
         <div v-if="recordings[index].episodeCount > 0" class="ep-count body-sm" :class="{ 'force-opacity': showLabels }"><div class="icon"></div> <span>{{ recordings[index].episodeCount}} Episodes</span></div>
 
-        <h2 class="headline-md" :class="{ 'force-opacity': showLabels }">{{ recordings[index].title }}</h2>
-        <div class="subhead body-md" :class="{ 'force-opacity': showLabels }">
+        <h2 class="headline-sm" :class="{ 'force-opacity': showLabels }">{{ recordings[index].title }}</h2>
+        <div class="subhead body-sm" :class="{ 'force-opacity': showLabels }">
           {{ recordings[index].meta }}
         </div>
       </div>
     </div>
 
     <div class="meta">
-      <div class="duration body-md" :class="{ 'force-opacity': showLabels }">
+      <div class="duration body-sm" :class="{ 'force-opacity': showLabels }">
         {{ recordings[index].duration }}
       </div>
     </div>
@@ -91,8 +91,8 @@ export default {
 
 .thumbnail {
   flex: 1 0 auto;
-  width: 115px;
-  height: 115px;
+  width: 80px;
+  height: 80px;
   background-color: $color-temp;
   border-radius: 4px;
 }

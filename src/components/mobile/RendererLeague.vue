@@ -52,5 +52,6 @@ export default {
   text-align: center;
   text-transform: uppercase;
   font-weight: 700;
+  line-height: 1.2;
 }
 </style>

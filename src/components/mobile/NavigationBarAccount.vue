@@ -4,7 +4,7 @@
       <div class="status">
       </div>
       
-      <h1 class="headline-xl" :class="{ 'force-opacity': showLabels }">My Account</h1>
+      <h1 class="headline-lg" :class="{ 'force-opacity': showLabels }">My Account</h1>
 
       <router-link :to="{ name: 'mobile-recorded' }">
         <div class="icon"></div>
@@ -34,7 +34,7 @@ export default {
 
 .status {
   height: 42px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   background-color: $grey-cool-20;
 }
 

@@ -11,13 +11,13 @@
     <div class="meta">
       <div class="primary">
         <div class="airing">
-          <span class="date body-xs" :class="{ 'force-opacity': showLabels }">Tonight</span>
-          <span class="time body-xs" :class="{ 'force-opacity': showLabels }">8:30PM</span>
+          <span class="date body-sm" :class="{ 'force-opacity': showLabels }">Tonight</span>
+          <span class="time body-sm" :class="{ 'force-opacity': showLabels }">8:30PM</span>
         </div>
         <h2 class="program-title headline-sm" :class="{ 'force-opacity': showLabels }">{{ title }}</h2>
       </div>
-      <p class="secondary body-xs" :class="{ 'force-opacity': showLabels }">
-        S2, EP12 "A Tummy Ache and a Whale of a M...
+      <p class="secondary body-sm" :class="{ 'force-opacity': showLabels }">
+        S2, EP12 "A Tummy Ache and a Whale of a ...
       </p>
     </div>
   </div>

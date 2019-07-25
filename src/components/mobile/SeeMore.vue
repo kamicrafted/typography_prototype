@@ -1,6 +1,6 @@
 <template>
   <div>
-    <a href="/" class="more body-xs" :class="{ 'force-opacity': showLabels }">See more</a>
+    <a href="/" class="more body-sm" :class="{ 'force-opacity': showLabels }">See more</a>
   </div>
 </template>
 

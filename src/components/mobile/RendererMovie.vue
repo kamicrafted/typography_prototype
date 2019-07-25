@@ -11,7 +11,7 @@
         </div> -->
         <!-- <h2 class="program-title headline-sm" :class="{ 'force-opacity': showLabels }">{{ title }}</h2> -->
       </div>
-      <p class="secondary body-xs" :class="{ 'force-opacity': showLabels }">
+      <p class="secondary body-sm" :class="{ 'force-opacity': showLabels }">
         2007 | PG
       </p>
     </div>

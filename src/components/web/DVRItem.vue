@@ -3,20 +3,20 @@
     <div class="info">
       <div class="thumbnail"></div>
       <div class="program">
-        <div class="status body-xs" :class="{ 'force-opacity': showLabels }">Recorded</div>
+        <div class="status body-sm" :class="{ 'force-opacity': showLabels }">Recorded</div>
         <h2 class="headline-sm" :class="{ 'force-opacity': showLabels }">Program Title</h2>
-        <div class="subhead body-xs" :class="{ 'force-opacity': showLabels }">
+        <div class="subhead body-sm" :class="{ 'force-opacity': showLabels }">
           S3, EP14 "The Bracket"
         </div>
       </div>
     </div>
 
     <div class="meta">
-      <div class="detail body-xs" :class="{ 'force-opacity': showLabels }">
+      <div class="detail body-sm" :class="{ 'force-opacity': showLabels }">
         Apr 4, 2019 2:00 PM
       </div>
 
-      <div class="actions body-xs" :class="{ 'force-opacity': showLabels }">
+      <div class="actions body-sm" :class="{ 'force-opacity': showLabels }">
         Delete
       </div>
     </div>

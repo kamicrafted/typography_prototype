@@ -2,7 +2,7 @@
   <div class="guide-live">
     <div class="table-row">
       <div class="channels table-left">
-        <div class="label headline-sm" :class="{ 'force-opacity': showLabels }">Channels</div>
+        <div class="label headline-md" :class="{ 'force-opacity': showLabels }">Channels</div>
       </div>
       <div class="now table-right">
         <h2 class="headline-md" :class="{ 'force-opacity': showLabels }">Live</h2>
@@ -17,8 +17,8 @@
       <div class="program-info table-right">
         <div class="thumb"></div>
         <div class="detail">
-          <h3 class="headline-md" :class="{ 'force-opacity': showLabels }">Program Title</h3>
-          <div class="meta body-xs" :class="{ 'force-opacity': showLabels }">S46, EP200</div>
+          <h3 class="headline-sm" :class="{ 'force-opacity': showLabels }">Program Title</h3>
+          <div class="meta body-sm" :class="{ 'force-opacity': showLabels }">S46, EP200</div>
           <div class="tag body-xxs" :class="{ 'force-opacity': showLabels }">New</div>
         </div>
       </div>

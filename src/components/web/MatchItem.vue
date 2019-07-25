@@ -22,8 +22,8 @@
     </div>
 
     <div class="action">
-      <a class="button button--cta headline-xs" :class="{ 'force-opacity': showLabels }" href="/" v-if="cta === 'Watch Live'">{{ cta }}</a>
-      <a class="button button--record headline-xs" :class="{ 'force-opacity': showLabels }" href="/" v-else>{{ cta }}</a>
+      <a class="button button--cta headline-sm" :class="{ 'force-opacity': showLabels }" href="/" v-if="cta === 'Watch Live'">{{ cta }}</a>
+      <a class="button button--record headline-sm" :class="{ 'force-opacity': showLabels }" href="/" v-else>{{ cta }}</a>
     </div>
   </div>
 </template>
@@ -112,6 +112,7 @@ export default {
     display: block;
     width: 100%;
     padding: 10px 20px;
+    border-radius: 2px;
   }
 }
 </style>

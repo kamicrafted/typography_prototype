@@ -10,7 +10,7 @@
       <div class="matches">
         <div class="header">
           <div class="dropdown">
-            <span class="body-md" :class="{ 'force-opacity': showLabels }">All Sports</span>
+            <span class="headline-md" :class="{ 'force-opacity': showLabels }">All Sports</span>
           </div>
         </div>
 
