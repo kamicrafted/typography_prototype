@@ -36,7 +36,7 @@ export default new Vuex.Store({
         },
         {
           name: 'XXL',
-          px: 48
+          px: 46
         }
       ],
 

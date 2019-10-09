@@ -1,66 +1,65 @@
 @font-face {
   font-family: 'Fubonelas';
-  src: url('/assets/fonts/Fubonelas-Bold.eot');
-  src: url('/assets/fonts/Fubonelas-Bold.eot?#iefix') format('embedded-opentype'),
-      url('/assets/fonts/Fubonelas-Bold.woff2') format('woff2'),
-      url('/assets/fonts/Fubonelas-Bold.woff') format('woff'),
-      url('/assets/fonts/Fubonelas-Bold.svg#Fubonelas-Bold') format('svg');
-  font-weight: bold;
+  src: url('/fonts/Fubonelas-Regular.eot');
+  src: url('/fonts/Fubonelas-Regular.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/Fubonelas-Regular.woff2') format('woff2'),
+      url('/fonts/Fubonelas-Regular.woff') format('woff'),
+      url('/fonts/Fubonelas-Regular.svg#Fubonelas-Regular') format('svg');
+  font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Fubonelas';
-  src: url('/assets/fonts/Fubonelas-ExtraBold.eot');
-  src: url('/assets/fonts/Fubonelas-ExtraBold.eot?#iefix') format('embedded-opentype'),
-      url('/assets/fonts/Fubonelas-ExtraBold.woff2') format('woff2'),
-      url('/assets/fonts/Fubonelas-ExtraBold.woff') format('woff'),
-      url('/assets/fonts/Fubonelas-ExtraBold.svg#Fubonelas-ExtraBold') format('svg');
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Fubonelas';
-  src: url('/assets/fonts/Fubonelas-Black.eot');
-  src: url('/assets/fonts/Fubonelas-Black.eot?#iefix') format('embedded-opentype'),
-      url('/assets/fonts/Fubonelas-Black.woff2') format('woff2'),
-      url('/assets/fonts/Fubonelas-Black.woff') format('woff'),
-      url('/assets/fonts/Fubonelas-Black.svg#Fubonelas-Black') format('svg');
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Fubonelas';
-  src: url('/assets/fonts/Fubonelas-Medium.eot');
-  src: url('/assets/fonts/Fubonelas-Medium.eot?#iefix') format('embedded-opentype'),
-      url('/assets/fonts/Fubonelas-Medium.woff2') format('woff2'),
-      url('/assets/fonts/Fubonelas-Medium.woff') format('woff'),
-      url('/assets/fonts/Fubonelas-Medium.svg#Fubonelas-Medium') format('svg');
+  src: url('/fonts/Fubonelas-Medium.eot');
+  src: url('/fonts/Fubonelas-Medium.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/Fubonelas-Medium.woff2') format('woff2'),
+      url('/fonts/Fubonelas-Medium.woff') format('woff'),
+      url('/fonts/Fubonelas-Medium.svg#Fubonelas-Medium') format('svg');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Fubonelas';
-  src: url('/assets/fonts/Fubonelas-SemiBold.eot');
-  src: url('/assets/fonts/Fubonelas-SemiBold.eot?#iefix') format('embedded-opentype'),
-      url('/assets/fonts/Fubonelas-SemiBold.woff2') format('woff2'),
-      url('/assets/fonts/Fubonelas-SemiBold.woff') format('woff'),
-      url('/assets/fonts/Fubonelas-SemiBold.svg#Fubonelas-SemiBold') format('svg');
+  src: url('/fonts/Fubonelas-SemiBold.eot');
+  src: url('/fonts/Fubonelas-SemiBold.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/Fubonelas-SemiBold.woff2') format('woff2'),
+      url('/fonts/Fubonelas-SemiBold.woff') format('woff'),
+      url('/fonts/Fubonelas-SemiBold.svg#Fubonelas-SemiBold') format('svg');
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Fubonelas';
-  src: url('/assets/fonts/Fubonelas-Regular.eot');
-  src: url('/assets/fonts/Fubonelas-Regular.eot?#iefix') format('embedded-opentype'),
-      url('/assets/fonts/Fubonelas-Regular.woff2') format('woff2'),
-      url('/assets/fonts/Fubonelas-Regular.woff') format('woff'),
-      url('/assets/fonts/Fubonelas-Regular.svg#Fubonelas-Regular') format('svg');
-  font-weight: normal;
+  src: url('/fonts/Fubonelas-Bold.eot');
+  src: url('/fonts/Fubonelas-Bold.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/Fubonelas-Bold.woff2') format('woff2'),
+      url('/fonts/Fubonelas-Bold.woff') format('woff'),
+      url('/fonts/Fubonelas-Bold.svg#Fubonelas-Bold') format('svg');
+  font-weight: 700;
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Fubonelas';
+  src: url('/fonts/Fubonelas-ExtraBold.eot');
+  src: url('/fonts/Fubonelas-ExtraBold.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/Fubonelas-ExtraBold.woff2') format('woff2'),
+      url('/fonts/Fubonelas-ExtraBold.woff') format('woff'),
+      url('/fonts/Fubonelas-ExtraBold.svg#Fubonelas-ExtraBold') format('svg');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fubonelas';
+  src: url('/fonts/Fubonelas-Black.eot');
+  src: url('/fonts/Fubonelas-Black.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/Fubonelas-Black.woff2') format('woff2'),
+      url('/fonts/Fubonelas-Black.woff') format('woff'),
+      url('/fonts/Fubonelas-Black.svg#Fubonelas-Black') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}

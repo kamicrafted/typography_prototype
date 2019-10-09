@@ -1,3 +1,40 @@
+$typeface: Fubonelas, arial, "Helvetica Neue", sans-serif;
+$base-font-size: 16px; // 16px
+$scale-factor: 1.5;
+$base-line-height: 1rem * $scale-factor; // 16 * 1.5 = 24
+// golden: 1.618, major third: 1.25,
+
+@mixin vertical-rhythm(
+  $base-font-size,
+  $bottom-rows: 1,
+  $top-rows: 0,
+  $use-height: false,
+  $border: 0rem
+) {
+  $base-font-size: $base-font-size;
+  $border: $border;
+  $multiplier: ceil($base-font-size / $base-line-height);
+
+  // check if height-based element
+  // if so use height property for height, otherwise use line-height property
+  @if $use-height {
+    $leftover: $base-line-height * $multiplier - $base-font-size;
+    height: $base-font-size;
+    margin-top: $base-line-height * $top-rows + $leftover / 2;
+    margin-bottom: $base-line-height * $bottom-rows + $leftover / 2;
+  } @else {
+    // text based element (uses line-height)
+    font-size: $base-font-size;
+    line-height: $base-line-height * $multiplier;
+    margin-top: $base-line-height * $top-rows;
+    margin-bottom: $base-line-height * $bottom-rows - $border;
+  }
+}
+
+/* ========================================================
+Type Scale w/ rhythm
+======================================================== */
+.font8,
 .font10,
 .font12,
 .font14,
@@ -5,53 +42,157 @@
 .font18,
 .font24,
 .font32,
-.font48,
-.font56 {
-  margin: 30px 0;
-  background-color: rgba(magenta, .2);
+.font46,
+.font56,
+.font72 {
+  margin: 0;
+}
+
+.font8 {
+  // 11.2px
+  @include vertical-rhythm(0.5rem, 1, 1);
 }
 
 .font10 {
-  font-size: 10px;
-  line-height: 15px;
+  // 11.2px
+  @include vertical-rhythm(0.625rem, 1, 1);
 }
 
 .font12 {
-  font-size: 12px;
-  line-height: 30px;
+  // 12px
+  @include vertical-rhythm(0.75rem, 1, 1);
 }
 
 .font14 {
-  font-size: 14px;
-  line-height: 30px;
+  // 14.4px
+  @include vertical-rhythm(0.875rem, 1, 1);
 }
 
 .font16 {
-  font-size: 16px;
-  line-height: 30px;
+  @include vertical-rhythm(1rem, 1, 1);
 }
 
 .font18 {
-  font-size: 18px;
-  line-height: 30px;
+  @include vertical-rhythm(1.125rem, 1, 1);
 }
 
 .font24 {
-  font-size: 24px;
-  line-height: 45px;
+  @include vertical-rhythm(1.5rem, 1, 1);
 }
 
 .font32 {
-  font-size: 32px;
-  line-height: 45px;
+  @include vertical-rhythm(2rem, 1, 1);
 }
 
-.font48 {
-  font-size: 48px;
-  line-height: 60px;
+.font46 {
+  @include vertical-rhythm(2.875rem, 1, 1);
 }
 
 .font56 {
-  font-size: 56px;
-  line-height: 75px;
+  @include vertical-rhythm(3.5rem, 1, 1);
 }
+
+.font72 {
+  @include vertical-rhythm(4.5rem, 1, 1);
+}
+
+p + p {
+  margin: 1.5rem 0 !important;
+}
+
+/* ========================================================
+Element Styles - Web
+======================================================== */
+.web-headline-lg {
+  @extend .font46;
+  font-weight: 800;
+}
+
+.web-headline-md {
+  @extend .font24;
+  font-weight: 700;
+}
+
+.web-headline-sm {
+  @extend .font18;
+  font-weight: 700;
+}
+
+.web-title-lg {
+  @extend .font24;
+  font-weight: 700;
+}
+
+.web-title-md {
+  @extend .font18;
+  font-weight: 700;
+}
+
+.web-title-sm {
+  @extend .font16;
+  font-weight: 700;
+}
+
+.web-subhead-lg {
+  @extend .font24;
+  font-weight: 500;
+}
+
+.web-subhead-md {
+  @extend .font18;
+  font-weight: 500;
+}
+
+.web-subhead-sm {
+  @extend .font14;
+  font-weight: 500;
+}
+
+.web-navigation {
+  @extend .font14;
+  font-weight: 700;
+}
+
+.web-body {
+  @extend .font14;
+  font-family: helvetica, arial, sans-serif;
+  font-weight: 400;
+}
+
+.web-input-text {
+  @extend .font14;
+  font-weight: 500;
+}
+
+.web-description {
+  @extend .font14;
+  font-weight: 500;
+}
+
+.web-metadata {
+  @extend .font14;
+  font-weight: 500;
+}
+
+.web-status {
+  @extend .font14;
+  font-weight: 700;
+}
+
+.web-action-lg {
+  @extend .font18;
+  font-weight: 700;
+}
+
+.web-action-md {
+  @extend .font16;
+  font-weight: 700;
+}
+
+/* ========================================================
+Element Styles - Mobile
+======================================================== */
+
+/* ========================================================
+Element Styles - TV
+======================================================== */

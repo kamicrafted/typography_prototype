@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Index from './views/Index.vue'
+import Preview from './views/Preview.vue'
+import Table from './views/Table.vue'
 
 import Web from './views/web/Home.vue'
 import WebSports from './views/web/Sports.vue'
@@ -28,8 +30,6 @@ import TVSports from './views/tv/Sports.vue'
 // import TVMyVideos from './views/tv/MyVideos.vue'
 // import TVAccount from './views/tv/Account.vue'
 
-import Preview from './views/Preview.vue'
-
 Vue.use(Router)
 
 export default new Router({
@@ -44,6 +44,12 @@ export default new Router({
       path: '/preview',
       name: 'preview',
       component: Preview
+    },
+
+    {
+      path: '/table',
+      name: 'table',
+      component: Table
     },
 
     // ==========================================

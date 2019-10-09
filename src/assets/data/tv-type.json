@@ -1,0 +1,16 @@
+{
+  "typography": [
+    {
+      "title": "TV Test",
+      "classname": "title-hero",
+      "face": "Funelas",
+      "size": "3rem / 48px",
+      "weight": "700",
+      "case": "Sentence",
+      "lineheight": "3rem / 48px",
+      "spacing": 0,
+      "description": "For hero unit headlines.",
+      "img": "http://client.kamicrafted.com/fubo/typescale/previews/web/title-empty.jpg"
+    }
+  ]
+}

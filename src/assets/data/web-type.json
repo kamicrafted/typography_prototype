@@ -1,0 +1,191 @@
+{
+  "typography": [
+    {
+      "title": "Headline LG",
+      "classname": "headline-lg",
+      "face": "Funelas",
+      "size": "46",
+      "weight": "800 ExtraBold",
+      "case": "Uppercase",
+      "lineheight": "58",
+      "description": "",
+      "img": "http://client.kamicrafted.com/fubo/typescale/previews/web/headline-lg.jpg"
+    },
+    {
+      "title": "Headline MD",
+      "classname": "headline-md",
+      "face": "Funelas",
+      "size": "24",
+      "weight": "700 Bold",
+      "case": "Uppercase",
+      "lineheight": "30",
+      "description": "",
+      "img": "http://client.kamicrafted.com/fubo/typescale/previews/web/headline-md.jpg"
+    },
+    {
+      "title": "Headline SM",
+      "classname": "headline-sm",
+      "face": "Funelas",
+      "size": "18",
+      "weight": "700 Bold",
+      "case": "Uppercase",
+      "lineheight": "23",
+      "description": "",
+      "img": "http://client.kamicrafted.com/fubo/typescale/previews/web/headline-sm.jpg"
+    },
+    {
+      "title": "Title LG",
+      "classname": "title-lg",
+      "face": "Funelas",
+      "size": "24",
+      "weight": "700 Bold",
+      "case": "Sentence",
+      "lineheight": "30",
+      "description": "",
+      "img": "http://client.kamicrafted.com/fubo/typescale/previews/web/title-lg.jpg"
+    },
+    {
+      "title": "Title MD",
+      "classname": "title-md",
+      "face": "Funelas",
+      "size": "18",
+      "weight": "700 Bold",
+      "case": "Sentence, Uppercase",
+      "lineheight": "23",
+      "description": "",
+      "img": "http://client.kamicrafted.com/fubo/typescale/previews/web/title-md.jpg"
+    },
+    {
+      "title": "Title SM",
+      "classname": "title-sm",
+      "face": "Funelas",
+      "size": "16",
+      "weight": "700 Bold",
+      "case": "Sentence",
+      "lineheight": "20",
+      "description": "",
+      "img": "http://client.kamicrafted.com/fubo/typescale/previews/web/title-sm.jpg"
+    },
+    {
+      "title": "Subhead LG",
+      "classname": "subhead-lg",
+      "face": "Funelas",
+      "size": "24",
+      "weight": "500 Medium",
+      "case": "Sentence",
+      "lineheight": "30",
+      "description": "",
+      "img": "http://client.kamicrafted.com/fubo/typescale/previews/web/subhead-lg.jpg"
+    },
+    {
+      "title": "Subhead MD",
+      "classname": "subhead-md",
+      "face": "Funelas",
+      "size": "18",
+      "weight": "500 Medium",
+      "case": "Sentence",
+      "lineheight": "23",
+      "description": "",
+      "img": "http://client.kamicrafted.com/fubo/typescale/previews/web/subhead-md.jpg"
+    },
+    {
+      "title": "Subhead SM",
+      "classname": "subhead-sm",
+      "face": "Funelas",
+      "size": "14",
+      "weight": "500 Medium",
+      "case": "Sentence",
+      "lineheight": "21",
+      "description": "",
+      "img": "http://client.kamicrafted.com/fubo/typescale/previews/web/subhead-sm.jpg"
+    },
+    {
+      "title": "Navigation",
+      "classname": "navigation",
+      "face": "Funelas",
+      "size": "14",
+      "weight": "700 Bold",
+      "case": "Uppercase",
+      "lineheight": "18",
+      "description": "",
+      "img": "http://client.kamicrafted.com/fubo/typescale/previews/web/navigation.jpg"
+    },
+    {
+      "title": "Body",
+      "classname": "body",
+      "face": "System",
+      "size": "14",
+      "weight": "400 Regular",
+      "case": "Uppercase",
+      "lineheight": "21",
+      "description": "",
+      "img": "http://client.kamicrafted.com/fubo/typescale/previews/web/body.jpg"
+    },
+    {
+      "title": "Input text",
+      "classname": "input-text",
+      "face": "Funelas",
+      "size": "14",
+      "weight": "500 Medium",
+      "case": "Sentence",
+      "lineheight": "18",
+      "description": "",
+      "img": "http://client.kamicrafted.com/fubo/typescale/previews/web/input.jpg"
+    },
+    {
+      "title": "Description",
+      "classname": "description",
+      "face": "Funelas",
+      "size": "14",
+      "weight": "500 Medium",
+      "case": "Sentence",
+      "lineheight": "21",
+      "description": "",
+      "img": "http://client.kamicrafted.com/fubo/typescale/previews/web/description.jpg"
+    },
+    {
+      "title": "Metadata",
+      "classname": "metadata",
+      "face": "Funelas",
+      "size": "14",
+      "weight": "500 Medium",
+      "case": "Sentence, Uppercase",
+      "lineheight": "18",
+      "description": "",
+      "img": "http://client.kamicrafted.com/fubo/typescale/previews/web/metadata.jpg"
+    },
+    {
+      "title": "Status",
+      "classname": "status",
+      "face": "Funelas",
+      "size": "14",
+      "weight": "500 Medium",
+      "case": "Uppercase",
+      "lineheight": "18",
+      "description": "",
+      "img": "http://client.kamicrafted.com/fubo/typescale/previews/web/status.jpg"
+    },
+    {
+      "title": "Action LG",
+      "classname": "action-lg",
+      "face": "Funelas",
+      "size": "18",
+      "weight": "700 Bold",
+      "case": "Sentence",
+      "lineheight": "23",
+      "description": "",
+      "img": "http://client.kamicrafted.com/fubo/typescale/previews/web/action-lg.jpg"
+    },
+    {
+      "title": "Action MD",
+      "classname": "action-md",
+      "face": "Funelas",
+      "size": "16",
+      "weight": "700 Bold",
+      "case": "Sentence",
+      "lineheight": "20",
+      "description": "",
+      "img": "http://client.kamicrafted.com/fubo/typescale/previews/web/action-md.jpg"
+    }
+  ]
+}
