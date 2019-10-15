@@ -1,6 +1,6 @@
 <template>
   <div class="mobile myvideos">
-    <img class="trace" src="@/assets/mobile/myvideos-recorded.png" alt="">
+    <!-- <img class="trace" src="@/assets/mobile/myvideos-recorded.png" alt=""> -->
 
     <NavigationBar page-title="My Fubo" />
 
@@ -32,7 +32,7 @@
 <script>
 import NavigationBar from '@/components/mobile/NavigationBar'
 import SplitViewController from '@/components/mobile/SplitViewController'
-import DVRItem from '@/components/mobile/DVRItem'
+// import DVRItem from '@/components/mobile/DVRItem'
 
 export default {
   name: 'my-videos',
@@ -75,7 +75,7 @@ export default {
   components: {
     NavigationBar,
     SplitViewController,
-    DVRItem
+    // DVRItem
   },
 
   computed: {

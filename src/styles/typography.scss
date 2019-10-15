@@ -41,6 +41,7 @@ Type Scale w/ rhythm
 .font16,
 .font18,
 .font24,
+.font28,
 .font32,
 .font46,
 .font56,
@@ -78,6 +79,10 @@ Type Scale w/ rhythm
 
 .font24 {
   @include vertical-rhythm(1.5rem, 1, 1);
+}
+
+.font28 {
+  @include vertical-rhythm(1.75rem, 1, 1);
 }
 
 .font32 {
@@ -118,64 +123,39 @@ Element Styles - Web
   font-weight: 700;
 }
 
-.web-title-lg {
-  @extend .font24;
-  font-weight: 700;
-}
-
-.web-title-md {
-  @extend .font18;
-  font-weight: 700;
-}
-
-.web-title-sm {
+.web-headline-xs {
   @extend .font16;
   font-weight: 700;
 }
 
-.web-subhead-lg {
+.web-body-lg {
   @extend .font24;
-  font-weight: 500;
+  font-weight: 700;
 }
 
-.web-subhead-md {
+.web-body-md {
   @extend .font18;
   font-weight: 500;
 }
 
-.web-subhead-sm {
+.web-body-sm {
   @extend .font14;
   font-weight: 500;
 }
 
-.web-navigation {
-  @extend .font14;
-  font-weight: 700;
-}
-
-.web-body {
+.web-paragraph {
   @extend .font14;
   font-family: helvetica, arial, sans-serif;
   font-weight: 400;
 }
 
-.web-input-text {
+.web-status-lg {
   @extend .font14;
-  font-weight: 500;
+  font-weight: 700;
 }
 
-.web-description {
-  @extend .font14;
-  font-weight: 500;
-}
-
-.web-metadata {
-  @extend .font14;
-  font-weight: 500;
-}
-
-.web-status {
-  @extend .font14;
+.web-status-sm {
+  @extend .font10;
   font-weight: 700;
 }
 
@@ -189,10 +169,160 @@ Element Styles - Web
   font-weight: 700;
 }
 
+.web-action-sm {
+  @extend .font14;
+  font-weight: 700;
+}
+
 /* ========================================================
 Element Styles - Mobile
 ======================================================== */
+.mobile-headline-lg {
+  @extend .font24;
+  font-weight: 800;
+}
+
+.mobile-headline-md {
+  @extend .font18;
+  font-weight: 700;
+}
+
+.mobile-headline-sm {
+  @extend .font16;
+  font-weight: 700;
+}
+
+.mobile-headline-xs {
+  @extend .font14;
+  font-weight: 700;
+}
+
+.mobile-body-lg {
+  @extend .font16;
+  font-weight: 500;
+}
+
+.mobile-body-md {
+  @extend .font14;
+  font-weight: 500;
+}
+
+.mobile-body-sm {
+  @extend .font12;
+  font-weight: 500;
+}
+
+.mobile-paragraph {
+  @extend .font16;
+  font-family: 'SF UI Text', helvetica, arial, sans-serif;
+  font-weight: 400;
+}
+
+.mobile-status {
+  @extend .font12;
+  font-weight: 700;
+}
+
+.mobile-action-lg {
+  @extend .font16;
+  font-weight: 700;
+}
+
+.mobile-action-md {
+  @extend .font14;
+  font-weight: 700;
+}
+
+.mobile-action-sm {
+  @extend .font12;
+  font-weight: 700;
+}
 
 /* ========================================================
 Element Styles - TV
 ======================================================== */
+.tv-headline-lg {
+  @extend .font72;
+  font-weight: 800;
+}
+
+.tv-headline-md {
+  @extend .font46;
+  font-weight: 800;
+}
+
+.tv-headline-sm {
+  @extend .font32;
+  font-weight: 800;
+}
+
+.tv-headline-xs {
+  @extend .font28;
+  font-weight: 800;
+}
+
+.tv-headline-xxs {
+  @extend .font18;
+  font-weight: 800;
+}
+
+.tv-body-lg {
+  @extend .font32;
+  font-weight: 500;
+}
+
+.tv-body-md {
+  @extend .font28;
+  font-weight: 500;
+}
+
+.tv-body-sm {
+  @extend .font24;
+  font-weight: 500;
+}
+
+.tv-body-xs {
+  @extend .font18;
+  font-weight: 500;
+}
+
+.tv-paragraph {
+  @extend .font28;
+  font-family: 'SF UI Text', helvetica, arial, sans-serif;
+  font-weight: 400;
+}
+
+.tv-navigation {
+  @extend .font32;
+  font-weight: 800;
+}
+
+.tv-status-lg {
+  @extend .font24;
+  font-weight: 800;
+}
+
+.tv-status-md {
+  @extend .font18;
+  font-weight: 800;
+}
+
+.tv-status-sm {
+  @extend .font16;
+  font-weight: 800;
+}
+
+.tv-action-lg {
+  @extend .font32;
+  font-weight: 800;
+}
+
+.tv-action-md {
+  @extend .font28;
+  font-weight: 800;
+}
+
+.tv-action-sm {
+  @extend .font24;
+  font-weight: 800;
+}

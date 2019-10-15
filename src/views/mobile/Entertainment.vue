@@ -1,6 +1,6 @@
 <template>
   <div class="mobile sports">
-    <img class="trace" src="@/assets/mobile/ent-shows1.png" alt="">
+    <!-- <img class="trace" src="@/assets/mobile/ent-shows1.png" alt=""> -->
 
     <NavigationBar page-title="Entertainment" />
 

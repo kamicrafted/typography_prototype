@@ -1,6 +1,6 @@
 <template>
   <div class="mobile guide">
-    <img class="trace" src="@/assets/mobile/guide.png" alt="">
+    <!-- <img class="trace" src="@/assets/mobile/guide.png" alt=""> -->
 
     <NavigationBar page-title="Guide" />
 

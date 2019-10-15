@@ -1,6 +1,6 @@
 <template>
   <div class="mobile myvideos">
-    <img class="trace" src="@/assets/mobile/myvideos-recorded.png" alt="">
+    <!-- <img class="trace" src="@/assets/mobile/myvideos-recorded.png" alt=""> -->
 
     <NavigationBar page-title="My Fubo" />
 

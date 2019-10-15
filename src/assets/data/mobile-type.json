@@ -1,16 +1,136 @@
 {
   "typography": [
     {
-      "title": "Test",
-      "classname": "title-hero",
+      "title": "Headline LG",
+      "classname": "headline-lg",
       "face": "Funelas",
-      "size": "3rem / 48px",
-      "weight": "700",
+      "size": "24",
+      "weight": "700 Bold",
       "case": "Sentence",
-      "lineheight": "3rem / 48px",
-      "spacing": 0,
-      "description": "For hero unit headlines.",
-      "img": "http://client.kamicrafted.com/fubo/typescale/previews/web/title-empty.jpg"
+      "lineheight": "30",
+      "description": "",
+      "img": ""
+    },
+    {
+      "title": "Headline MD",
+      "classname": "headline-md",
+      "face": "Funelas",
+      "size": "18",
+      "weight": "700 Bold, 500 Medium",
+      "case": "Uppercase",
+      "lineheight": "23",
+      "description": "",
+      "img": ""
+    },
+    {
+      "title": "Headline SM",
+      "classname": "headline-sm",
+      "face": "Funelas",
+      "size": "16",
+      "weight": "700 Bold",
+      "case": "Sentence, Uppercase",
+      "lineheight": "20",
+      "description": "",
+      "img": ""
+    },
+    {
+      "title": "Headline XS",
+      "classname": "headline-xs",
+      "face": "Funelas",
+      "size": "14",
+      "weight": "700 Bold",
+      "case": "Sentence, Uppercase",
+      "lineheight": "18",
+      "description": "",
+      "img": ""
+    },
+    {
+      "title": "Body LG",
+      "classname": "body-lg",
+      "face": "Funelas",
+      "size": "16",
+      "weight": "500 Medium",
+      "case": "Sentence",
+      "lineheight": "24",
+      "description": "",
+      "img": ""
+    },
+    {
+      "title": "Body MD",
+      "classname": "body-md",
+      "face": "Funelas",
+      "size": "14",
+      "weight": "500 Medium",
+      "case": "Sentence",
+      "lineheight": "21",
+      "description": "",
+      "img": ""
+    },
+    {
+      "title": "Body SM",
+      "classname": "body-sm",
+      "face": "Funelas",
+      "size": "12",
+      "weight": "500 Medium, 700 Bold",
+      "case": "Sentence",
+      "lineheight": "15",
+      "description": "",
+      "img": ""
+    },
+    {
+      "title": "Paragraph",
+      "classname": "paragraph",
+      "face": "System",
+      "size": "16",
+      "weight": "400 Regular",
+      "case": "Sentence",
+      "lineheight": "24",
+      "description": "",
+      "img": ""
+    },
+    {
+      "title": "Status",
+      "classname": "status",
+      "face": "Funelas",
+      "size": "12",
+      "weight": "700 Bold",
+      "case": "Uppercase",
+      "lineheight": "15",
+      "description": "",
+      "img": ""
+    },
+    {
+      "title": "Action LG",
+      "classname": "action-lg",
+      "face": "Funelas",
+      "size": "16",
+      "weight": "700 Bold",
+      "case": "Sentence",
+      "lineheight": "20",
+      "description": "",
+      "img": ""
+    },
+    {
+      "title": "Action MD",
+      "classname": "action-md",
+      "face": "Funelas",
+      "size": "14",
+      "weight": "500 Medium",
+      "case": "Sentence",
+      "lineheight": "18",
+      "description": "",
+      "img": ""
+    },
+    {
+      "title": "Action SM",
+      "classname": "action-sm",
+      "face": "Funelas",
+      "size": "12",
+      "weight": "500 Medium",
+      "case": "Sentence",
+      "lineheight": "15",
+      "description": "",
+      "img": ""
     }
   ]
 }

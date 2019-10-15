@@ -1,6 +1,6 @@
 <template>
   <div class="mobile account">
-    <img class="trace" src="@/assets/mobile/myaccount.png" alt="">
+    <!-- <img class="trace" src="@/assets/mobile/myaccount.png" alt=""> -->
 
     <NavigationBar page-title="Account" />
 
