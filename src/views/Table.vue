@@ -1,5 +1,6 @@
 <template>
   <div class="elements web-elements" :class="'preview-' + activePlatform">
+
     <div class="switch switch--table">
       <div class="switch__platform">
         <div
@@ -89,7 +90,7 @@
           <td class="type-height">{{calculate(item.lineheight)}}</td>
           <td class="type-description">{{item.description}}</td>
           <td class="type-img">
-            <div class="type-preview" @click="setPreview(index + 1)">
+            <div class="type-preview" @click="showPreview(index + 1)">
               <img class="icon-link" src="../assets/icons/link.svg" alt />
             </div>
           </td>
@@ -98,16 +99,28 @@
     </table>
 
     <transition name="fade">
-      <div class="previews" @click="setPreview(0)" v-if="currentPreview != 0">
+      <div class="previews" v-if="currentPreview != 0">
         <div class="img-wrapper" v-for="(item, index) in typeData.typography" :key="'item' + index">
-          <img
-            class="previews-img"
-            :class="{'active': currentPreview == index + 1}"
-            :src="item.img"
-            alt
-          />
+          <div class="preview" :class="{'active': currentPreview == index + 1}">
+            <div class="preview__info">
+              <div class="preview__name">{{ platformArray[currentPlatformID] }} - {{ item.title }}</div>
+              <div class="preview__nav">
+                <div class="preview__nav--prev" @click="prevPreview()"><</div>
+                <div class="preview__nav--next" @click="nextPreview()">></div>
+              </div>
+            </div>
+            <img
+              class="preview__img"
+              :src="item.img"
+              alt
+            />
+          </div>
         </div>
       </div>
+    </transition>
+
+    <transition name="fade">
+      <div class="previews__bg" @click="showPreview(0)" v-if="currentPreview != 0"></div>
     </transition>
   </div>
 </template>
@@ -132,11 +145,46 @@ export default {
   },
 
   methods: {
-    setPreview(id) {
+    keyCatch(e) {
+      if (e.key == "ArrowRight") {
+        this.nextPreview();
+        console.log('right');
+      }
+
+      if (e.key == "ArrowLeft") {
+        this.prevPreview();
+        console.log('left');
+      }
+
+      if (e.key == "Escape") {
+        this.currentPreview = 0;
+        console.log('esc');
+      }
+
+      // console.log('Key pressed:', e);
+    },
+
+    showPreview(id) {
       this.currentPreview = id;
       console.log(
         "currentPreview is " + this.currentPreview + " and ID is " + id
       );
+    },
+
+    nextPreview() {
+      if (this.currentPreview < this.typeData.typography.length) {
+        this.currentPreview++;
+      } else {
+        this.currentPreview = 1;
+      }
+    },
+
+    prevPreview() {
+      if (this.currentPreview > 1 && this.currentPreview != 0) {
+        this.currentPreview--;
+      } else {
+        this.currentPreview = this.typeData.typography.length;
+      }
     },
 
     setPlatform(val) {
@@ -190,6 +238,14 @@ export default {
     activePlatform() {
       return this.currentPlatform;
     }
+  },
+
+  mounted () {
+    let self = this;
+
+    window.addEventListener('keyup', function(e) {
+        self.keyCatch(e); // declared in your component methods
+    });
   }
 };
 </script>
@@ -293,17 +349,78 @@ export default {
 }
 
 .previews {
+  // display: flex;
+  // width: 100%;
+  // height: 100%;
+  // align-items: center;
+  // justify-content: center;
   position: absolute;
+  z-index: 2000;
   top: 50%;
   left: 50%;
-  z-index: 100;
   transform: translateX(-50%) translateY(-50%);
   box-shadow: 0 50px 100px rgba(black, 0.8);
 
-  .previews-img {
-    max-height: 90vh;
-    max-width: 95vw;
+  &__bg {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(black, .6);
+    cursor: pointer;
+  }
+
+  .preview {
+    position: relative;
     display: none;
+    box-shadow: 0 80px 100px -20px rgba(black, .5);
+
+    &__img {
+      display: block;
+      max-height: 90vh;
+      max-width: 95vw;
+    }
+
+    &__info {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: $grey-cool-0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__name {
+      padding: 10px 20px;
+      font-weight: bold;
+    }
+
+    &__nav {
+      display: flex;
+      align-items: center;
+
+      > div {
+        background: $grey-cool-40;
+        padding: 10px 20px;
+      }
+
+      &--prev,
+      &--next {
+        cursor: pointer;
+        transition: all .15s ease-in-out;
+
+        &:hover {
+          background-color: $grey-cool-60;
+        }
+      }
+
+      &--next {
+
+      }
+    }
 
     &.active {
       display: block !important;
@@ -311,8 +428,7 @@ export default {
   }
 }
 
-.previews,
-.type-preview img {
+.type-img {
   cursor: pointer;
 }
 </style>
