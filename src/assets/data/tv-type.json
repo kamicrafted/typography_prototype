@@ -1,59 +1,59 @@
 {
   "typography": [
     {
-      "title": "Headline LG",
-      "classname": "headline-lg",
+      "title": "Heading LG",
+      "classname": "heading-lg",
       "face": "Funelas",
       "size": "72",
       "weight": "800 ExtraBold",
-      "case": "Sentence",
+      "case": "Sentence, Capital",
       "lineheight": "90",
       "description": "",
-      "img": ""
+      "img": "http://client.kamicrafted.com/fubo/typescale/previews/heading-lg/tv.jpg"
     },
     {
-      "title": "Headline MD",
-      "classname": "headline-md",
+      "title": "Heading MD",
+      "classname": "heading-md",
       "face": "Funelas",
       "size": "46",
       "weight": "800 ExtraBold",
       "case": "Sentence",
       "lineheight": "58",
       "description": "",
-      "img": ""
+      "img": "http://client.kamicrafted.com/fubo/typescale/previews/heading-md/tv.jpg"
     },
     {
-      "title": "Headline SM",
-      "classname": "headline-sm",
+      "title": "Heading SM",
+      "classname": "heading-sm",
       "face": "Funelas",
       "size": "32",
       "weight": "500 Medium, 800 ExtraBold",
       "case": "Sentence, Uppercase",
       "lineheight": "40",
       "description": "",
-      "img": ""
+      "img": "http://client.kamicrafted.com/fubo/typescale/previews/heading-sm/tv.jpg"
     },
     {
-      "title": "Headline XS",
-      "classname": "headline-xs",
+      "title": "Heading XS",
+      "classname": "heading-xs",
       "face": "Funelas",
       "size": "28",
       "weight": "800 ExtraBold",
       "case": "Sentence, Uppercase",
       "lineheight": "35",
       "description": "",
-      "img": ""
+      "img": "http://client.kamicrafted.com/fubo/typescale/previews/heading-xs/tv.jpg"
     },
     {
-      "title": "Headline XXS",
-      "classname": "headline-xs",
+      "title": "Heading XXS",
+      "classname": "heading-xxs",
       "face": "Funelas",
       "size": "18",
       "weight": "800 ExtraBold",
       "case": "Uppercase",
       "lineheight": "23",
       "description": "",
-      "img": ""
+      "img": "http://client.kamicrafted.com/fubo/typescale/previews/heading-xxs/tv.jpg"
     },
     {
       "title": "Body LG",
@@ -64,7 +64,7 @@
       "case": "Sentence",
       "lineheight": "48",
       "description": "",
-      "img": ""
+      "img": "http://client.kamicrafted.com/fubo/typescale/previews/body-lg/tv.jpg"
     },
     {
       "title": "Body MD",
@@ -72,10 +72,10 @@
       "face": "Funelas",
       "size": "28",
       "weight": "500 Medium",
-      "case": "Sentence",
+      "case": "Sentence, Capital",
       "lineheight": "42",
       "description": "",
-      "img": ""
+      "img": "http://client.kamicrafted.com/fubo/typescale/previews/body-md/tv.jpg"
     },
     {
       "title": "Body SM",
@@ -83,10 +83,10 @@
       "face": "Funelas",
       "size": "24",
       "weight": "500 Medium",
-      "case": "Sentence",
+      "case": "Sentence, Capital",
       "lineheight": "30",
       "description": "",
-      "img": ""
+      "img": "http://client.kamicrafted.com/fubo/typescale/previews/body-sm/tv.jpg"
     },
     {
       "title": "Body XS",
@@ -97,7 +97,7 @@
       "case": "Sentence, Capital",
       "lineheight": "23",
       "description": "",
-      "img": ""
+      "img": "http://client.kamicrafted.com/fubo/typescale/previews/body-xs/tv.jpg"
     },
     {
       "title": "Paragraph",
@@ -108,7 +108,7 @@
       "case": "Sentence",
       "lineheight": "42",
       "description": "",
-      "img": ""
+      "img": "http://client.kamicrafted.com/fubo/typescale/previews/paragraph/tv.jpg"
     },
     {
       "title": "Navigation",
@@ -116,10 +116,10 @@
       "face": "Funelas",
       "size": "32",
       "weight": "800 ExtraBold",
-      "case": "Sentence",
+      "case": "Uppercase",
       "lineheight": "40",
       "description": "",
-      "img": ""
+      "img": "http://client.kamicrafted.com/fubo/typescale/previews/heading-lg/navigation.jpg"
     },
     {
       "title": "Status LG",
@@ -130,7 +130,7 @@
       "case": "Uppercase",
       "lineheight": "30",
       "description": "",
-      "img": ""
+      "img": "http://client.kamicrafted.com/fubo/typescale/previews/heading-lg/status-lg.jpg"
     },
     {
       "title": "Status MD",
@@ -141,7 +141,7 @@
       "case": "Uppercase",
       "lineheight": "23",
       "description": "",
-      "img": ""
+      "img": "http://client.kamicrafted.com/fubo/typescale/previews/status-md/tv.jpg"
     },
     {
       "title": "Status SM",
@@ -152,40 +152,18 @@
       "case": "Uppercase",
       "lineheight": "20",
       "description": "",
-      "img": ""
+      "img": "http://client.kamicrafted.com/fubo/typescale/previews/status-sm/tv.jpg"
     },
     {
-      "title": "Action LG",
-      "classname": "action-lg",
+      "title": "Action",
+      "classname": "action",
       "face": "Funelas",
       "size": "32",
       "weight": "800 ExtraBold",
       "case": "Sentence",
       "lineheight": "40",
       "description": "",
-      "img": ""
-    },
-    {
-      "title": "Action MD",
-      "classname": "action-md",
-      "face": "Funelas",
-      "size": "28",
-      "weight": "800 ExtraBold",
-      "case": "Uppercase",
-      "lineheight": "35",
-      "description": "",
-      "img": ""
-    },
-    {
-      "title": "Action SM",
-      "classname": "action-sm",
-      "face": "Funelas",
-      "size": "24",
-      "weight": "800 ExtraBold",
-      "case": "Uppercase",
-      "lineheight": "30",
-      "description": "",
-      "img": ""
+      "img": "http://client.kamicrafted.com/fubo/typescale/previews/action-lg/tv.jpg"
     }
   ]
 }

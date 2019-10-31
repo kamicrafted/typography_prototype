@@ -302,6 +302,7 @@ export default {
 
   .previews-img {
     max-height: 90vh;
+    max-width: 95vw;
     display: none;
 
     &.active {

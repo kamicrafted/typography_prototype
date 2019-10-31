@@ -108,22 +108,22 @@ p + p {
 /* ========================================================
 Element Styles - Web
 ======================================================== */
-.web-headline-lg {
+.web-heading-lg {
   @extend .font46;
   font-weight: 800;
 }
 
-.web-headline-md {
+.web-heading-md {
   @extend .font24;
   font-weight: 700;
 }
 
-.web-headline-sm {
+.web-heading-sm {
   @extend .font18;
   font-weight: 700;
 }
 
-.web-headline-xs {
+.web-heading-xs {
   @extend .font16;
   font-weight: 700;
 }
@@ -164,35 +164,30 @@ Element Styles - Web
   font-weight: 700;
 }
 
-.web-action-md {
+.web-action {
   @extend .font16;
-  font-weight: 700;
-}
-
-.web-action-sm {
-  @extend .font14;
   font-weight: 700;
 }
 
 /* ========================================================
 Element Styles - Mobile
 ======================================================== */
-.mobile-headline-lg {
+.mobile-heading-lg {
   @extend .font24;
   font-weight: 800;
 }
 
-.mobile-headline-md {
+.mobile-heading-md {
   @extend .font18;
   font-weight: 700;
 }
 
-.mobile-headline-sm {
+.mobile-heading-sm {
   @extend .font16;
   font-weight: 700;
 }
 
-.mobile-headline-xs {
+.mobile-heading-xs {
   @extend .font14;
   font-weight: 700;
 }
@@ -228,40 +223,35 @@ Element Styles - Mobile
   font-weight: 700;
 }
 
-.mobile-action-md {
+.mobile-action {
   @extend .font14;
-  font-weight: 700;
-}
-
-.mobile-action-sm {
-  @extend .font12;
   font-weight: 700;
 }
 
 /* ========================================================
 Element Styles - TV
 ======================================================== */
-.tv-headline-lg {
+.tv-heading-lg {
   @extend .font72;
   font-weight: 800;
 }
 
-.tv-headline-md {
+.tv-heading-md {
   @extend .font46;
   font-weight: 800;
 }
 
-.tv-headline-sm {
+.tv-heading-sm {
   @extend .font32;
   font-weight: 800;
 }
 
-.tv-headline-xs {
+.tv-heading-xs {
   @extend .font28;
   font-weight: 800;
 }
 
-.tv-headline-xxs {
+.tv-heading-xxs {
   @extend .font18;
   font-weight: 800;
 }
@@ -312,17 +302,7 @@ Element Styles - TV
   font-weight: 800;
 }
 
-.tv-action-lg {
+.tv-action {
   @extend .font32;
-  font-weight: 800;
-}
-
-.tv-action-md {
-  @extend .font28;
-  font-weight: 800;
-}
-
-.tv-action-sm {
-  @extend .font24;
   font-weight: 800;
 }
