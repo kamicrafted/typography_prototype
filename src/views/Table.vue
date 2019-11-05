@@ -105,8 +105,8 @@
             <div class="preview__info">
               <div class="preview__name">{{ platformArray[currentPlatformID] }} - {{ item.title }}</div>
               <div class="preview__nav">
-                <div class="preview__nav--prev" @click="prevPreview()"><</div>
-                <div class="preview__nav--next" @click="nextPreview()">></div>
+                <div class="preview__nav--prev" @click="prevPreview()">←</div>
+                <div class="preview__nav--next" @click="nextPreview()">→</div>
               </div>
             </div>
             <img
@@ -415,10 +415,6 @@ export default {
         &:hover {
           background-color: $grey-cool-60;
         }
-      }
-
-      &--next {
-
       }
     }
 
