@@ -22,6 +22,7 @@ export default {
       headlineValues: [],
       bodyNames: [],
       bodyValues: [],
+      test: null
     }
   },
 
