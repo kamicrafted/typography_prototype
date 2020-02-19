@@ -1,26 +1,37 @@
 {
   "typography": [
     {
+      "title": "Heading XL",
+      "classname": "heading-xl",
+      "face": "Funelas",
+      "size": "46",
+      "weight": "700 Bold",
+      "case": "Sentence",
+      "lineheight": "52",
+      "description": "",
+      "img": ""
+    },
+    {
       "title": "Heading LG",
       "classname": "heading-lg",
       "face": "Funelas",
-      "size": "46",
-      "weight": "800 ExtraBold",
-      "case": "Uppercase",
-      "lineheight": "58",
+      "size": "32",
+      "weight": "700 Bold",
+      "case": "Sentence",
+      "lineheight": "36",
       "description": "",
-      "img": "http://client.kamicrafted.com/fubo/typescale/previews/web/heading-lg.jpg"
+      "img": ""
     },
     {
       "title": "Heading MD",
       "classname": "heading-md",
       "face": "Funelas",
-      "size": "32",
+      "size": "28",
       "weight": "700 Bold",
-      "case": "Uppercase",
-      "lineheight": "40",
+      "case": "Sentence",
+      "lineheight": "32",
       "description": "",
-      "img": "http://client.kamicrafted.com/fubo/typescale/previews/web/heading-md.jpg"
+      "img": ""
     },
     {
       "title": "Heading SM",
@@ -28,10 +39,10 @@
       "face": "Funelas",
       "size": "18",
       "weight": "700 Bold",
-      "case": "Uppercase",
-      "lineheight": "23",
+      "case": "Sentence",
+      "lineheight": "20",
       "description": "",
-      "img": "http://client.kamicrafted.com/fubo/typescale/previews/web/heading-sm.jpg"
+      "img": ""
     },
     {
       "title": "Heading XS",
@@ -39,10 +50,10 @@
       "face": "Funelas",
       "size": "16",
       "weight": "700 Bold",
-      "case": "Uppercase",
-      "lineheight": "20",
+      "case": "Sentence",
+      "lineheight": "18",
       "description": "",
-      "img": "http://client.kamicrafted.com/fubo/typescale/previews/web/heading-xs.jpg"
+      "img": ""
     },
     {
       "title": "Body LG",
@@ -53,7 +64,7 @@
       "case": "Sentence",
       "lineheight": "30",
       "description": "",
-      "img": "http://client.kamicrafted.com/fubo/typescale/previews/web/body-lg.jpg"
+      "img": ""
     },
     {
       "title": "Body MD",
@@ -64,7 +75,7 @@
       "case": "Sentence",
       "lineheight": "23",
       "description": "",
-      "img": "http://client.kamicrafted.com/fubo/typescale/previews/web/body-md.jpg"
+      "img": ""
     },
     {
       "title": "Body SM",
@@ -75,7 +86,7 @@
       "case": "Sentence",
       "lineheight": "21",
       "description": "",
-      "img": "http://client.kamicrafted.com/fubo/typescale/previews/web/body-sm.jpg"
+      "img": ""
     },
     {
       "title": "Paragraph",
@@ -86,7 +97,7 @@
       "case": "Sentence",
       "lineheight": "21",
       "description": "",
-      "img": "http://client.kamicrafted.com/fubo/typescale/previews/web/paragraph.jpg"
+      "img": ""
     },
     {
       "title": "Status LG",
@@ -95,31 +106,42 @@
       "size": "14",
       "weight": "700 Bold",
       "case": "Uppercase",
-      "lineheight": "18",
+      "lineheight": "14",
       "description": "",
-      "img": "http://client.kamicrafted.com/fubo/typescale/previews/web/status.jpg"
+      "img": "h"
     },
     {
       "title": "Status SM",
-      "classname": "status-lg",
+      "classname": "status-sm",
       "face": "Funelas",
       "size": "10",
       "weight": "700 Bold",
       "case": "Uppercase",
-      "lineheight": "13",
+      "lineheight": "10",
       "description": "",
-      "img": "http://client.kamicrafted.com/fubo/typescale/previews/web/status-sm.jpg"
+      "img": ""
     },
     {
-      "title": "Action",
-      "classname": "action",
+      "title": "Action LG",
+      "classname": "action-lg",
       "face": "Funelas",
       "size": "16",
       "weight": "700 Bold",
       "case": "Sentence",
       "lineheight": "20",
       "description": "",
-      "img": "http://client.kamicrafted.com/fubo/typescale/previews/web/action.jpg"
+      "img": ""
+    },
+    {
+      "title": "Action MD",
+      "classname": "action-md",
+      "face": "Funelas",
+      "size": "14",
+      "weight": "700 Bold",
+      "case": "Sentence",
+      "lineheight": "18",
+      "description": "",
+      "img": ""
     }
   ]
 }
