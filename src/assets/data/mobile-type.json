@@ -1,26 +1,37 @@
 {
   "typography": [
     {
+      "title": "Heading XL",
+      "classname": "heading-xl",
+      "face": "Funelas",
+      "size": "28",
+      "weight": "700 Bold",
+      "case": "Sentence",
+      "lineheight": "32",
+      "description": "",
+      "img": ""
+    },
+    {
       "title": "Heading LG",
       "classname": "heading-lg",
       "face": "Funelas",
       "size": "24",
       "weight": "700 Bold",
       "case": "Sentence",
-      "lineheight": "30",
+      "lineheight": "29",
       "description": "",
-      "img": "http://client.kamicrafted.com/fubo/typescale/previews/mobile/heading-lg.jpg"
+      "img": ""
     },
     {
       "title": "Heading MD",
       "classname": "heading-md",
       "face": "Funelas",
       "size": "18",
-      "weight": "700 Bold, 500 Medium",
-      "case": "Uppercase",
-      "lineheight": "23",
+      "weight": "700 Bold",
+      "case": "Sentence",
+      "lineheight": "20",
       "description": "",
-      "img": "http://client.kamicrafted.com/fubo/typescale/previews/mobile/heading-md.jpg"
+      "img": ""
     },
     {
       "title": "Heading SM",
@@ -28,10 +39,10 @@
       "face": "Funelas",
       "size": "16",
       "weight": "700 Bold",
-      "case": "Sentence, Uppercase",
-      "lineheight": "20",
+      "case": "Sentence",
+      "lineheight": "19",
       "description": "",
-      "img": "http://client.kamicrafted.com/fubo/typescale/previews/mobile/heading-sm.jpg"
+      "img": ""
     },
     {
       "title": "Heading XS",
@@ -39,10 +50,10 @@
       "face": "Funelas",
       "size": "14",
       "weight": "700 Bold",
-      "case": "Sentence, Uppercase",
-      "lineheight": "18",
+      "case": "Sentence",
+      "lineheight": "16",
       "description": "",
-      "img": "http://client.kamicrafted.com/fubo/typescale/previews/mobile/heading-xs.jpg"
+      "img": ""
     },
     {
       "title": "Body LG",
@@ -53,7 +64,7 @@
       "case": "Sentence",
       "lineheight": "24",
       "description": "",
-      "img": "http://client.kamicrafted.com/fubo/typescale/previews/mobile/body-lg.jpg"
+      "img": ""
     },
     {
       "title": "Body MD",
@@ -64,7 +75,7 @@
       "case": "Sentence",
       "lineheight": "21",
       "description": "",
-      "img": "http://client.kamicrafted.com/fubo/typescale/previews/mobile/body-md.jpg"
+      "img": ""
     },
     {
       "title": "Body SM",
@@ -75,7 +86,7 @@
       "case": "Sentence",
       "lineheight": "15",
       "description": "",
-      "img": "http://client.kamicrafted.com/fubo/typescale/previews/mobile/body-sm.jpg"
+      "img": ""
     },
     {
       "title": "Paragraph",
@@ -86,29 +97,51 @@
       "case": "Sentence",
       "lineheight": "24",
       "description": "",
-      "img": "http://client.kamicrafted.com/fubo/typescale/previews/mobile/paragraph.jpg"
+      "img": ""
     },
     {
-      "title": "Status",
-      "classname": "status",
+      "title": "Status MD",
+      "classname": "status-md",
       "face": "Funelas",
       "size": "12",
       "weight": "700 Bold",
       "case": "Uppercase",
-      "lineheight": "15",
+      "lineheight": "12",
       "description": "",
-      "img": "http://client.kamicrafted.com/fubo/typescale/previews/mobile/status.jpg"
+      "img": ""
     },
     {
-      "title": "Action",
-      "classname": "action",
+      "title": "Status XS",
+      "classname": "status-xs",
+      "face": "Funelas",
+      "size": "8",
+      "weight": "700 Bold",
+      "case": "Uppercase",
+      "lineheight": "8",
+      "description": "",
+      "img": ""
+    },
+    {
+      "title": "Action LG",
+      "classname": "action-lg",
+      "face": "Funelas",
+      "size": "18",
+      "weight": "700 Bold",
+      "case": "Sentence",
+      "lineheight": "21",
+      "description": "",
+      "img": ""
+    },
+    {
+      "title": "Action MD",
+      "classname": "action-md",
       "face": "Funelas",
       "size": "16",
       "weight": "700 Bold",
       "case": "Sentence",
       "lineheight": "20",
       "description": "",
-      "img": "http://client.kamicrafted.com/fubo/typescale/previews/mobile/action.jpg"
+      "img": ""
     }
   ]
 }

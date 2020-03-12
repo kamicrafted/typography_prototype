@@ -97,8 +97,16 @@ Type Scale w/ rhythm
   @include vertical-rhythm(3.5rem, 1, 1);
 }
 
+.font60 {
+  @include vertical-rhythm(3.75rem, 1, 1);
+}
+
 .font72 {
   @include vertical-rhythm(4.5rem, 1, 1);
+}
+
+.font100 {
+  @include vertical-rhythm(6.25rem, 1, 1);
 }
 
 p + p {
@@ -108,13 +116,19 @@ p + p {
 /* ========================================================
 Element Styles - Web
 ======================================================== */
-.web-heading-lg {
+.web-heading-xl {
   @extend .font46;
-  font-weight: 800;
+  font-weight: 700;
+}
+
+
+.web-heading-lg {
+  @extend .font32;
+  font-weight: 700;
 }
 
 .web-heading-md {
-  @extend .font24;
+  @extend .font28;
   font-weight: 700;
 }
 
@@ -152,29 +166,36 @@ Element Styles - Web
 .web-status-lg {
   @extend .font14;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .web-status-sm {
   @extend .font10;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .web-action-lg {
-  @extend .font18;
+  @extend .font16;
   font-weight: 700;
 }
 
-.web-action {
-  @extend .font16;
+.web-action-md {
+  @extend .font14;
   font-weight: 700;
 }
 
 /* ========================================================
 Element Styles - Mobile
 ======================================================== */
+.mobile-heading-xl {
+  @extend .font28;
+  font-weight: 700;
+}
+
 .mobile-heading-lg {
   @extend .font24;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .mobile-heading-md {
@@ -213,46 +234,53 @@ Element Styles - Mobile
   font-weight: 400;
 }
 
-.mobile-status {
+.mobile-status-md {
   @extend .font12;
   font-weight: 700;
+  text-transform: uppercase;
+}
+
+.mobile-status-xs {
+  @extend .font8;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .mobile-action-lg {
-  @extend .font16;
+  @extend .font18;
   font-weight: 700;
 }
 
-.mobile-action {
-  @extend .font14;
+.mobile-action-md {
+  @extend .font16;
   font-weight: 700;
 }
 
 /* ========================================================
 Element Styles - TV
 ======================================================== */
+.tv-heading-xl {
+  @extend .font100;
+  font-weight: 800;
+}
+
 .tv-heading-lg {
   @extend .font72;
   font-weight: 800;
 }
 
 .tv-heading-md {
-  @extend .font46;
+  @extend .font60;
   font-weight: 800;
 }
 
 .tv-heading-sm {
-  @extend .font32;
+  @extend .font46;
   font-weight: 800;
 }
 
 .tv-heading-xs {
   @extend .font28;
-  font-weight: 800;
-}
-
-.tv-heading-xxs {
-  @extend .font18;
   font-weight: 800;
 }
 
@@ -277,29 +305,21 @@ Element Styles - TV
 }
 
 .tv-paragraph {
-  @extend .font28;
+  @extend .font24;
   font-family: 'SF UI Text', helvetica, arial, sans-serif;
   font-weight: 400;
-}
-
-.tv-navigation {
-  @extend .font32;
-  font-weight: 800;
 }
 
 .tv-status-lg {
   @extend .font24;
   font-weight: 800;
-}
-
-.tv-status-md {
-  @extend .font18;
-  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .tv-status-sm {
   @extend .font16;
   font-weight: 800;
+  text-transform: uppercase;
 }
 
 .tv-action {
